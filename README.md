@@ -1,4 +1,4 @@
-# Cedar Task
+# Ceadar Task
 
 This repo contains the notebooks and supporting materials for the Cedar task.
 
