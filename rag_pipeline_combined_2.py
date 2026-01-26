@@ -912,7 +912,11 @@ def _infer_llm_task(model_name: str) -> str:
 def generate_answer(cfg: RAGConfig, query: str, docs: List[Document]) -> str:
     task = cfg.llm_task or _infer_llm_task(cfg.llm_model)
     pipeline = _import_pipeline()
-    generator = pipeline(task, model=cfg.llm_model)
+    try:
+        generator = pipeline(task, model=cfg.llm_model)
+    except KeyError:
+        task = "text-generation"
+        generator = pipeline(task, model=cfg.llm_model)
     max_len = getattr(generator.tokenizer, "model_max_length", 512)
     if not isinstance(max_len, int) or max_len > 100000:
         max_len = 512
