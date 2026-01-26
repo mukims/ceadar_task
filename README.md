@@ -15,7 +15,7 @@ app_port: 8501
 
 This repository contains a Retrieval-Augmented Generation (RAG) prototype that ingests PDF/DOCX/XLSX documents, retrieves relevant chunks via vector search, and synthesizes grounded answers using an LLM.
 
-## Architecture (End-to-End)
+## Architecture Overview and Design Rationale
 
 1. **Ingestion**: PDFs, DOCX, XLSX are parsed into `Document` objects with metadata.
 2. **Chunking**: Text is split into overlapping chunks for retrieval.
@@ -28,10 +28,10 @@ This repository contains a Retrieval-Augmented Generation (RAG) prototype that i
 [PDF/DOCX/XLSX] -> [Chunking] -> [Embeddings] -> [FAISS] -> [Top-K] -> [LLM Answer]
 ```
 
-## Design Rationale & Trade-offs
+## Implementation Decisions and Trade-offs
 
-- **Embedding model**: default `sentence-transformers/all-MiniLM-L6-v2` for CPU-friendly performance.
-- **LLM**: default `google/flan-t5-base` for grounded QA on CPU; can be swapped via env or UI.
+- **Embedding model**: default `sentence-transformers/all-MiniLM-L6-v2` for CPU-friendly performance. Advanced models are used in huggingface deployment. 
+- **LLM**: default `google/flan-t5-base` for grounded QA on CPU; can be swapped via env or UI. Advanced models are used in huggingface deployment. 
 - **Parsing**: PDF table extraction and OCR are optional to keep the pipeline robust if deps are missing.
 - **Persistence**: FAISS index is cached in `faiss_store` to avoid recomputation on restart.
 - **Minimal dependencies**: Streamlit app for deployment with a simple UI.
@@ -69,18 +69,8 @@ Optional environment variables:
 
 ## Evaluation — Test Queries (5–8)
 
-Use these to validate retrieval and answer quality:
 
-1. What is the objective of the Data Scientist II RAG challenge?
-2. Which components are required in the deliverables?
-3. What does the challenge require for cloud deployment?
-4. Summarize the main idea of the “Attention is All You Need” paper.
-5. What is the EU AI Act about, at a high level?
-6. Which evaluation criteria are used to score the submission?
-7. What are the provided document types for ingestion?
-8. What are the limitations of this prototype?
-
-### Additional Test Queries (Cross-Doc + Sanity Checks)
+###  Test Queries (Cross-Doc + Sanity Checks)
 
 1. What is the difference between DeepSeek-R1-Zero and DeepSeek-R1?
 2. How does GRPO differ from PPO, and why was it chosen?
@@ -91,7 +81,7 @@ Use these to validate retrieval and answer quality:
 7. Does the Inflation Calculator show that Transformers cause inflation?
 8. Which article of the AI Act explains scaled dot-product attention?
 
-### Observations & Limitations
+### Observations & Limitations on local system
 
 - **Accuracy**: Strong for queries that map cleanly to a single source document.
 - **Retrieval sensitivity**: Smaller chunks improve recall but can fragment context.
