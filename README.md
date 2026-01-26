@@ -80,6 +80,17 @@ Use these to validate retrieval and answer quality:
 7. What are the provided document types for ingestion?
 8. What are the limitations of this prototype?
 
+### Additional Test Queries (Cross-Doc + Sanity Checks)
+
+1. What is the difference between DeepSeek-R1-Zero and DeepSeek-R1?
+2. How does GRPO differ from PPO, and why was it chosen?
+3. What is the "aha moment" described in the paper, and why is it significant?
+4. Compare reinforcement learning in DeepSeek-R1 with supervised training in the original Transformer paper.
+5. How does the AI Act's definition of "general purpose AI" differ from how researchers define foundation models?
+6. Which annex defines high-risk AI use cases in the AI Act?
+7. Does the Inflation Calculator show that Transformers cause inflation?
+8. Which article of the AI Act explains scaled dot-product attention?
+
 ### Observations & Limitations
 
 - **Accuracy**: Strong for queries that map cleanly to a single source document.
