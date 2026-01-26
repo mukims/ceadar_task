@@ -52,9 +52,15 @@ def _load_embedding_model(model_name: str):
 
 @st.cache_resource(show_spinner=False)
 def _load_generator(model_name: str, task_override: str | None):
-    task = task_override or _infer_llm_task(model_name)
+    task = "text-generation" or _infer_llm_task(model_name)
     pipeline = _import_pipeline()
-    generator = pipeline(task, model=model_name)
+    try:
+        generator = pipeline(task, model=model_name)
+    except KeyError:
+        # Some Transformers builds don't expose text2text-generation.
+        # Fall back to text-generation to keep the demo running.
+        task = "text-generation"
+        generator = pipeline(task, model=model_name)
     return generator, task
 
 
