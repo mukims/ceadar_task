@@ -789,6 +789,11 @@ def _faiss_docs_path(persist_dir: Path) -> Path:
     return persist_dir / "docs.jsonl"
 
 
+def _faiss_meta_path(persist_dir: Path) -> Path:
+    persist_dir.mkdir(parents=True, exist_ok=True)
+    return persist_dir / "index_meta.json"
+
+
 def _l2_normalize(vectors: np.ndarray) -> np.ndarray:
     norms = np.linalg.norm(vectors, axis=1, keepdims=True)
     norms[norms == 0] = 1.0
@@ -826,20 +831,80 @@ def _load_docs(path: Path) -> List[Document]:
     return docs
 
 
+def _load_index_meta(path: Path) -> Optional[Dict[str, Any]]:
+    import json
+    if not path.exists():
+        return None
+    try:
+        with path.open("r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        logger.warning("Failed to read FAISS metadata at %s; rebuilding index.", path)
+        return None
+
+
+def _is_index_compatible(cfg: RAGConfig, index, meta_path: Path) -> Tuple[bool, Optional[int]]:
+    meta = _load_index_meta(meta_path)
+    if meta:
+        if meta.get("embedding_model") != cfg.embedding_model:
+            return False, meta.get("dimension")
+        if int(meta.get("chunk_size", -1)) != cfg.chunk_size:
+            return False, meta.get("dimension")
+        if int(meta.get("chunk_overlap", -1)) != cfg.chunk_overlap:
+            return False, meta.get("dimension")
+        stored_dim = meta.get("dimension")
+        if isinstance(stored_dim, int) and stored_dim != index.d:
+            return False, stored_dim
+        return True, stored_dim if isinstance(stored_dim, int) else None
+    return False, None
+
+
+def _save_index_meta(path: Path, cfg: RAGConfig, index, doc_count: int, dimension: Optional[int] = None) -> None:
+    import json
+    payload = {
+        "embedding_model": cfg.embedding_model,
+        "chunk_size": cfg.chunk_size,
+        "chunk_overlap": cfg.chunk_overlap,
+        "dimension": int(dimension or index.d),
+        "doc_count": int(doc_count),
+    }
+    with path.open("w", encoding="utf-8") as f:
+        json.dump(payload, f, ensure_ascii=True, indent=2)
+
+
 def build_faiss_index(cfg: RAGConfig, chunks: List[Document]):
     faiss = _import_faiss()
     persist_dir = Path(cfg.persist_dir)
     index_path = _faiss_index_path(persist_dir)
     docs_path = _faiss_docs_path(persist_dir)
+    meta_path = _faiss_meta_path(persist_dir)
     if index_path.exists() and docs_path.exists():
         index = faiss.read_index(str(index_path))
         docs = _load_docs(docs_path)
+        # Determine the expected embedding dimension for the current model.
+        SentenceTransformer = _import_embeddings()
+        model = SentenceTransformer(cfg.embedding_model)
+        try:
+            expected_dim = model.get_sentence_embedding_dimension()
+        except AttributeError:
+            # fall back to computing a dummy embedding
+            expected_dim = model.encode(["dimension check"], convert_to_numpy=True).shape[1]
+        # Rebuild the index if its dimension does not match the expected dimension.
+        if index.d != expected_dim:
+            embeddings = _encode_chunks(cfg, chunks)
+            index = faiss.IndexFlatIP(embeddings.shape[1])
+            index.add(embeddings)
+            faiss.write_index(index, str(index_path))
+            _save_docs(docs_path, chunks)
+            _save_index_meta(meta_path, cfg, index, len(chunks), dimension=embeddings.shape[1])
+            return index, chunks
         return index, docs
     embeddings = _encode_chunks(cfg, chunks)
     index = faiss.IndexFlatIP(embeddings.shape[1])
     index.add(embeddings)
     faiss.write_index(index, str(index_path))
     _save_docs(docs_path, chunks)
+    _save_index_meta(meta_path, cfg, index, len(chunks), dimension=embeddings.shape[1])
     return index, chunks
 
 

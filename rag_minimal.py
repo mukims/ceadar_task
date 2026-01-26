@@ -149,7 +149,11 @@ def generate_answer(llm_model: str, prompt: str, max_new_tokens: int) -> str:
     from transformers import pipeline
 
     task = "text2text-generation" if "t5" in llm_model.lower() or "flan" in llm_model.lower() else "text-generation"
-    generator = pipeline(task, model=llm_model)
+    try:
+        generator = pipeline(task, model=llm_model)
+    except KeyError:
+        task = "text-generation"
+        generator = pipeline(task, model=llm_model)
     outputs = generator(
         prompt,
         max_new_tokens=max_new_tokens,

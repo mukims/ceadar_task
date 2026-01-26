@@ -672,6 +672,22 @@ def build_faiss_index(cfg: RAGConfig, chunks: List[Document]):
     if index_path.exists() and docs_path.exists():
         index = faiss.read_index(str(index_path))
         docs = _load_docs(docs_path)
+        # Determine the expected embedding dimension for the current model.
+        SentenceTransformer = _import_embeddings()
+        model = SentenceTransformer(cfg.embedding_model)
+        try:
+            expected_dim = model.get_sentence_embedding_dimension()
+        except AttributeError:
+            # fall back to computing a dummy embedding
+            expected_dim = model.encode(["dimension check"], convert_to_numpy=True).shape[1]
+        # Rebuild the index if its dimension does not match the expected dimension.
+        if index.d != expected_dim:
+            embeddings = _encode_chunks(cfg, chunks)
+            index = faiss.IndexFlatIP(embeddings.shape[1])
+            index.add(embeddings)
+            faiss.write_index(index, str(index_path))
+            _save_docs(docs_path, chunks)
+            return index, chunks
         return index, docs
 
     embeddings = _encode_chunks(cfg, chunks)

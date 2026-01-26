@@ -11,20 +11,6 @@ app_port: 8501
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Ceadar Task — RAG Prototype
 
 This repository contains a Retrieval-Augmented Generation (RAG) prototype that ingests PDF/DOCX/XLSX documents, retrieves relevant chunks via vector search, and synthesizes grounded answers using an LLM.
