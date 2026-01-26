@@ -96,8 +96,8 @@ This repo is prepared for a simple deployment on services like Hugging Face Spac
 - `requirements.txt` contains all Python dependencies.
 - Set environment variables to point to the data folder if not using repo root.
 
-Deployed app link (fill in after deployment):
-- TODO
+Deployed app link:
+- https://huggingface.co/spaces/mukimshardul/ceadar_rag_proto
 
 ## Repo Structure
 

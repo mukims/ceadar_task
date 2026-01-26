@@ -30,6 +30,7 @@ query using a language model.
 import argparse
 import logging
 from dataclasses import dataclass
+from functools import lru_cache
 from pathlib import Path
 from typing import List, Optional, Dict, Any, Tuple
 
@@ -974,9 +975,50 @@ def _infer_llm_task(model_name: str) -> str:
     return "text-generation"
 
 
+def _is_seq2seq_model(model_name: str) -> bool:
+    try:
+        from transformers import AutoConfig
+        config = AutoConfig.from_pretrained(model_name)
+        return bool(getattr(config, "is_encoder_decoder", False))
+    except Exception:
+        name = model_name.lower()
+        return any(token in name for token in ("t5", "flan", "bart", "pegasus", "mbart"))
+
+
+@lru_cache(maxsize=2)
+def _load_seq2seq_model(model_name: str):
+    from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
+    return model, tokenizer
+
+
 def generate_answer(cfg: RAGConfig, query: str, docs: List[Document]) -> str:
     task = cfg.llm_task or _infer_llm_task(cfg.llm_model)
     pipeline = _import_pipeline()
+    if _is_seq2seq_model(cfg.llm_model):
+        model, tokenizer = _load_seq2seq_model(cfg.llm_model)
+        max_len = getattr(tokenizer, "model_max_length", 512)
+        if not isinstance(max_len, int) or max_len > 100000:
+            max_len = 512
+        input_budget = max_len - cfg.max_new_tokens
+        if input_budget < 16:
+            input_budget = max_len
+        prompt = _build_prompt(
+            query,
+            docs,
+            cfg.max_context_chars,
+            tokenizer=tokenizer,
+            max_input_tokens=input_budget,
+        )
+        inputs = tokenizer(prompt, return_tensors="pt", truncation=True, max_length=input_budget)
+        outputs = model.generate(
+            **inputs,
+            max_new_tokens=cfg.max_new_tokens,
+            do_sample=False,
+            eos_token_id=getattr(tokenizer, "eos_token_id", None),
+        )
+        return tokenizer.decode(outputs[0], skip_special_tokens=True).strip()
     try:
         generator = pipeline(task, model=cfg.llm_model)
     except KeyError:

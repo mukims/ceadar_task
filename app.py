@@ -50,15 +50,57 @@ def _load_embedding_model(model_name: str):
     return SentenceTransformer(model_name)
 
 
+def _is_seq2seq_model(model_name: str) -> bool:
+    try:
+        from transformers import AutoConfig
+        config = AutoConfig.from_pretrained(model_name)
+        return bool(getattr(config, "is_encoder_decoder", False))
+    except Exception:
+        name = model_name.lower()
+        return any(token in name for token in ("t5", "flan", "bart", "pegasus", "mbart"))
+
+
+class _Seq2SeqGenerator:
+    def __init__(self, model_name: str) -> None:
+        from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+        self.model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
+
+    def __call__(
+        self,
+        prompt: str,
+        max_new_tokens: int,
+        do_sample: bool,
+        num_return_sequences: int,
+        eos_token_id=None,
+    ):
+        max_len = getattr(self.tokenizer, "model_max_length", 512)
+        if not isinstance(max_len, int) or max_len > 100000:
+            max_len = 512
+        inputs = self.tokenizer(prompt, return_tensors="pt", truncation=True, max_length=max_len)
+        gen_kwargs = {
+            "max_new_tokens": max_new_tokens,
+            "do_sample": do_sample,
+            "num_return_sequences": num_return_sequences,
+        }
+        if eos_token_id is not None:
+            gen_kwargs["eos_token_id"] = eos_token_id
+        outputs = self.model.generate(**inputs, **gen_kwargs)
+        texts = [self.tokenizer.decode(out, skip_special_tokens=True) for out in outputs]
+        return [{"generated_text": text} for text in texts]
+
+
 @st.cache_resource(show_spinner=False)
 def _load_generator(model_name: str, task_override: str | None):
-    task = "text-generation" or _infer_llm_task(model_name)
+    task = task_override or _infer_llm_task(model_name)
+    if _is_seq2seq_model(model_name):
+        # Transformers 5.x removed the text2text-generation pipeline registration.
+        # Use a lightweight seq2seq wrapper instead of falling back to text-generation.
+        return _Seq2SeqGenerator(model_name), "text2text-generation"
     pipeline = _import_pipeline()
     try:
         generator = pipeline(task, model=model_name)
     except KeyError:
-        # Some Transformers builds don't expose text2text-generation.
-        # Fall back to text-generation to keep the demo running.
         task = "text-generation"
         generator = pipeline(task, model=model_name)
     return generator, task
