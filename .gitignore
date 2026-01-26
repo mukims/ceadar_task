@@ -24,3 +24,11 @@ env/
 
 # Generated outputs
 rag_output/
+faiss_store/
+processed/
+out/
+chroma_db/
+taks_ununsed/
+
+# Local env
+.env
