@@ -147,8 +147,8 @@ def _generate_answer(generator, task: str, query: str, docs, max_new_tokens: int
 
 st.set_page_config(page_title="Cedar RAG Demo", layout="wide")
 
-st.title("Cedar RAG Prototype")
-st.write("Retrieval-augmented QA over the provided PDFs/DOCX/XLSX files.")
+st.title("RAG Prototype")
+st.write("Retrieval-augmented QA over the provided PDFs/DOCX/XLSX files releated to quantum inverse problem solving.")
 
 with st.sidebar:
     st.header("Configuration")
