@@ -1,0 +1,14 @@
+name: rag_prod
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+    - langchain-huggingface
+    - langchain-community
+    - chromadb
+    - pypdf
+    - transformers
+    - sentence-transformers
+    - importlib-resources
