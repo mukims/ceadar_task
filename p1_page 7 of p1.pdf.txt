@@ -1,0 +1,107 @@
+2
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+1.2
+ϵ+-ϵ-
+Z
+α
+FIG. 2. Inversion accuracy α as a function of averaging en-
+ergy window considered for inversion technique. Averaging is
+carried out with 100 diﬀerent conﬁgurations of L = 100 unit
+cells, each one of them containing 3% of impurities.
+is the transmission autocorrelation length. Fortunately,
+the conductance ﬂuctuations in mesoscopic systems are
+characterized by δEcor that are typically much smaller
+than the band width Z. Theory [1, 2] shows that δEcor
+depends essentially on the mean level density and on the
+average transmission ⟨Γ(E, n)⟩. We point out that the
+same idea can be extended to variations other than the
+energy, such as with external ﬁelds, strain, etc.
+3. Device size and transport regime
+It is important to assess how accurate the inversion
+procedure is in diﬀerent transport regimes. Fig. 3 plots
+the inversion accuracy as a function of the device size
+L for a concentration of n = 4%. It is unquestionable
+that the accuracy is very good (α < 0.1) for all sizes
+considered. It is instructive to put this result in context
+by looking at the localization length of the system, which
+in the case of n = 4% of impurities is approximately
+100 unit cells. That means that the inversion performs
+remarkably well regardless of the transport regime, i.e.,
+whether it is ballistic, diﬀusive or at the onset of the
+localized regime.
+4. Averaging procedure and statistical signiﬁcance of
+the Conﬁguration Average (CA) calculations
+As discussed in the main text, the underlying hypoth-
+esis for the applicability of the method are that conduc-
+tance ﬂuctuations contain very little system-speciﬁc in-
+formation (depending on disorder they can even have a
+universal character) and that the average conductance
+depends smoothly on the variables of interest. To obtain
+20
+40
+60
+80
+100
+120
+140
+0.00
+0.02
+0.04
+0.06
+0.08
+0.10
+L
+α
+FIG. 3. Inversion accuracy α as a function of device size L
+(in unit cells). Devices of all sizes contained a ﬁxed impurity
+concentration of n = 4%.
+accurate averages from a data set of the conductance as
+a function of a continuous (running) variable we use a
+standard ergodic hypothesis [3]. To be more precise, let
+us deﬁne the running average of a quantitity of interest
+O as
+⟨O(X)⟩≡
+1
+∆X
+Z
+dX O(X)
+where X is a generic continuous (running) variable and
+∆X is its corresponding range in the data set. In our
+study we employ the ergodic hypothesis to replace av-
+erages over conﬁgurational disorder (ensemble averages)
+with running averages, i.e.,
+Γ(X) = ⟨Γ(X)⟩
+and
+Γ(X)Γ(X + δX) = ⟨Γ(X)Γ(X + δX)⟩
+Note that the conductance is a two-point Green’s func-
+tion. This allows us to justify our statistical assumptions
+based on the vast literature on both the Kubo conduc-
+tity for disordered diﬀusive bulk systems and Landauer
+conductance for disordered/chaotic nanostructures.
+Regarding the number of conﬁgurations needed in the
+CA procedure, as standard, the higher the value of
+disorder realizations M the smaller the ﬂuctuations in
+⟨Γ(E, n)⟩.
+Universal conductance ﬂuctuations (UCF)
+help one to obtain accurate results for ⟨Γ(E, n)⟩at a
+modest value of M. Both for diﬀusive [4, 5] and chaotic
+ballistic systems [6], var(Γ) ≈1 is the main ﬁngerprint of
+UCF. Hence, the CA relative statistical error is expected
+to scale with [
+√
+M × ⟨Γ(E, n)⟩]−1.
+To bring the degree of ﬂuctuations to an acceptable
+level and produce results that are statistically signiﬁcant,
+we note that M is usually of the order 103. [7, 8]. One-
+dimensional (1D) systems, with corresponding smaller

@@ -1,0 +1,111 @@
+5
+with a minimum at exactly the same value (n = 0.7%) as
+the one depicted in Fig.4b of the main manuscript. This
+clearly indicates that the inversion method can decode
+the disorder signatures contained in the conductance sig-
+nals regardless of the tool used to describe the underlying
+electronic structure. It is reassuring to ﬁnd exactly the
+same answer using totally diﬀerent tools.
+0.2
+0.4
+0.6
+0.8
+1.0
+0
+2
+4
+6
+n (%)
+χ
+FIG. 8. DFT based misﬁt function generated for an arbitrary
+conﬁguration correctly indicates the minimum at 0.7% shown
+as a black dashed line.
+[1] C. H. Lewenkopf and H. A. Weidenmüller, Stochastic ver-
+sus semiclassical approach to quantum chaotic scattering,
+Ann. Phys. 212, 53 (1991).
+[2] E. R. P. Alves and C. H. Lewenkopf, Conductance ﬂuc-
+tuations and weak localization in chaotic quantum dots,
+Phys. Rev. Lett. 88, 256805 (2002).
+[3] J. French, P. Mello, and A. Pandey, Ergodic behavior in
+the statistical theory of nuclear reactions, Phys. Lett. B
+80, 17 (1978).
+[4] P. A. Lee and A. D. Stone, Universal conductance ﬂuc-
+tuations in metals, Phys. Rev. Lett. 55, 1622 (1985).
+[5] P. A. Lee, A. D. Stone, and H. Fukuyama, Universal con-
+ductance ﬂuctuations in metals: Eﬀects of ﬁnite temper-
+ature, interactions, and magnetic ﬁeld, Phys. Rev. B 35,
+1039 (1987).
+[6] H. U. Baranger and P. A. Mello, Mesoscopic transport
+through chaotic cavities: A random S-matrix theory ap-
+proach, Phys. Rev. Lett. 73, 142 (1994).
+[7] Y. Alhassid, The statistical theory of quantum dots, Rev.
+Mod. Phys. 72, 895 (2000).
+[8] A. Lopez-Bezanilla and O. A. von Lilienfeld, Model-
+ing electronic quantum transport with machine learning,
+Phys. Rev. B 89, 235411 (2014).
+[9] J. M. Soler, E. Artacho, J. D. Gale, A. García, J. Jun-
+quera, P. Ordejón, and D. Sánchez-Portal, The siesta
+method for ab initio order-n materials simulation, J.
+Phys.: Condens. Matter 14, 2745 (2002).
+[10] J. P. Perdew, K. Burke, and M. Ernzerhof, Generalized
+gradient approximation made simple, Phys. Rev. Lett.
+77, 3865 (1996).
+[11] R. G. Amorim, A. Fazzio, A. J. R. da Silva, and A. R.
+Rocha, Conﬁnement eﬀects and why carbon nanotube
+bundles can work as gas sensors, Nanoscale 5, 2798
+(2013).
+[12] C. G. Rocha, A. Wall, A. R. Rocha, and M. S. Ferreira,
+Modelling the eﬀect of randomly dispersed adatoms on
+carbon nanotubes, J. Phys.: Condens. Matter 19, 346201
+(2007).
+[13] A. R. Rocha, M. Rossi, A. Fazzio, and A. J. R. da Silva,
+Designing real nanotube-based gas sensors, Phys. Rev.
+Lett. 100, 176803 (2008).
+[14] A. R. Rocha, M. Rossi, A. J. R. da Silva, and A. Fazzio,
+Realistic calculations of carbon-based disordered sys-
+tems, J. Phys. D: Appl. Phys. 43, 374002 (2010).
+[15] D. Gresch, G. Autes, O. V. Yazyev, M. Troyer, D. Van-
+derbilt, B. A. Bernevig, and A. A. Soluyanov, Z2pack:
+Numerical implementation of hybrid wannier centers
+for identifying topological materials, Phys. Rev. B 95,
+075146 (2017).
+[16] G. Pizzi, V. Vitale, R. Arita, S. Blügel, F. Freimuth,
+G. Géranton, M. Gibertini, D. Gresch, C. Johnson,
+T. Koretsune, J. Ibañez-Azpiroz, H. Lee, J.-M. Lihm,
+D. Marchand, A. Marrazzo, Y. Mokrousov, J. I. Mustafa,
+Y. Nohara, Y. Nomura, L. Paulatto, S. Poncé, T. Pon-
+weiser, J. Qiao, F. Thöle, S. S. Tsirkin, M. Wierzbowska,
+N. Marzari, D. Vanderbilt, I. Souza, A. A. Mostoﬁ, and
+J. R. Yates, Wannier90 as a community code: new fea-
+tures and applications, J. Phys.: Condens. Matter 32,
+165902 (2020).
+[17] M. B. Nardelli, F. T. Cerasoli, M. Costa, S. Curtarolo,
+R. De Gennaro, M. Fornari, L. Liyanage, A. R. Supka,
+and H. Wang, PAOFLOW: A utility to construct and
+operate on ab initio hamiltonians from the projections
+of electronic wavefunctions on atomic orbital bases, in-
+cluding characterization of topological materials, Com-
+put. Mater. Sci. 143, 462 (2018).
+[18] D. Vanderbilt, The pythtb package, in Berry Phases
+in Electronic Structure Theory:
+Electric Polarization,
+Orbital Magnetization and Topological Insulators (Cam-
+bridge University Press, 2018) pp. 327–362.
+[19] C. W. Groth, M. Wimmer,
+A. R. Akhmerov, and
+X. Waintal, Kwant:
+a software package for quantum
+transport, New J. Phys. 16, 063065 (2014).
+[20] L. Lima, A. Dusko, and C. Lewenkopf, Eﬃcient method
+for computing the electronic transport properties of a
+multiterminal system, Phys. Rev. B 97, 165405 (2018).
+[21] S. M. João, M. Anđelković, L. Covaci, T. G. Rappoport,
+J. M. Lopes, and A. Ferreira, Kite: high-performance
+accurate modelling of electronic structure and response
+functions of large molecules, disordered crystals and het-
+erostructures, R. Soc. Open Sci. 7, 191809 (2020).
+[22] D. A. Papaconstantopoulos et al., Handbook of the band
+structure of elemental solids (Springer, 1986).
+[23] J. C. Slater and G. F. Koster, Simpliﬁed LCAO method
+for the periodic potential problem, Phys. Rev. 94, 1498
+(1954).

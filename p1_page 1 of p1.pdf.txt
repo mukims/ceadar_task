@@ -1,0 +1,117 @@
+2
+L
+W
+(a)
+0
+1
+2
+3
+0
+1
+2
+3
+Γ
+Ε/t
+(b)
+FIG. 1. (a) Schematic diagram of the system under consid-
+eration. Two semi-inﬁnite leads of width W are separated by
+a region of length L containing a concentration n of impuri-
+ties represented by red dots. (b) Calculated conductance for
+a system made of a graphene nanoribbon of length L = 100
+unit cells as a function of the chemical potential (in units
+of t).
+The dashed line corresponds to the conductance of
+the pristine system, i.e., in the absence of impurities. The
+solid line shows the conductance for a disordered conﬁgura-
+tion containing N = 42 substitutional impurities (ϵ = 0.5t),
+which accounts for a concentration of n = 3%.
+and the on-site energies fully deﬁne the electronic struc-
+ture of the nanoribbon.
+Fig. 1(b) shows the energy-
+dependent conductance for an armchair-edged GNR of
+width W = 3a, a = 2.7Å being the graphene lattice pa-
+rameter. The dashed line is the conductance spectrum
+Γ0 for the pristine GNR. Results are shown for positive
+energies knowing that Γ0(E) = Γ0(−E).
+We now introduce N substitutional impurities.
+It
+is convenient to express the impurity number also as
+the percentage concentration n deﬁned as n = 100 ×
+(N/Ntot), where Ntot is the total number of sites in the
+central region. Both N and n will be used interchange-
+ably. The scattering strength of the impurities is char-
+acterized by the contrast between their on-site potential
+ϵ relative to that of the host, chosen to be zero.
+The
+solid line of Fig. 1(b) shows the conductance for the GNR
+with N = 42 impurities, ϵ = 0.5 t and L = 100 unit cells
+(n = 3%). Impurity locations were randomly selected but
+kept ﬁxed in the underlying Hamiltonian that generated
+the conductance Γ(E) of Fig. 1(b).
+Being the conductance sensitive to the locations of
+scattering centres, it is diﬃcult to devise an inversion tool
+capable of spatially mapping all impurities from the con-
+ductance spectrum information alone. The brute-force
+method of comparing the input conductance Γ(E) with
+those of every possible disorder conﬁguration is not viable
+because the number of combinations is too large for any
+practical situation. Machine-learning strategies are cur-
+rently being attempted to overcome this combinatorial
+hurdle [13–20] but spatial mapping of quantum devices
+through inversion remains challenging.
+Nevertheless, given the conductance spectrum Γ(E) of
+a device, one might ask whether it is possible to ﬁnd the
+exact number of scattering centres in it. This may not
+reveal the position of every impurity but it is a valuable
+piece of information and a lot more feasible to obtain.
+While the brute-force approach remains impractical, we
+must account for as many disorder realizations as possi-
+ble. We deﬁne the conﬁgurationally averaged (CA) con-
+ductance ⟨Γ⟩by summing over M realizations with the
+same number N of impurities (or concentration n), i.e.,
+⟨Γ(E, n)⟩= 1
+M
+M
+X
+j=1
+Γj(E) ,
+(2)
+where j labels the diﬀerent conﬁgurations. See SM [21]
+for a discussion on the suitable choices for M.
+The deviation between an arbitrary conductance result
+and its CA counterpart is given by
+∆Γ(E, n) = Γ(E) −⟨Γ(E, n)⟩
+(3)
+We reiterate that Γ(E) acts as the input conductance
+spectrum of a single realization and represents the im-
+mutable conductance of the device under investigation.
+The CA conductance spectrum, on the other hand, re-
+ﬂects the contribution of very many conﬁgurations and
+depends, in addition, on the impurity concentration. By
+treating n as a variable parameter, we can look for mini-
+mization trends in ∆Γ(E, n) that might indicate the real
+concentration in the device. Unfortunately, when plot-
+ted as a function of n in Fig. 2(a), the deviation ∆Γ for
+a ﬁxed energy E is featureless with wide error bars that
+result from repeating the calculation 1000 times.
+However, much cleaner trends are seen when ∆Γ is
+used in the form of a functional that measures how good
+a match Γ(E) and ⟨Γ(E, n)⟩are. This quantity is the
+misﬁt function χ(n) deﬁned as
+χ(n) =
+Z E+
+E−
+dE [ Γ(E) −⟨Γ(E, n)⟩]2 ,
+(4)
+where E−and E+ establish the energy window over which
+the integration takes place. Fig. 2(b) shows χ as a func-
+tion of n and displays a more distinctive trend with
+smaller error bars.
+The plot indicates that there is a
+sweet spot in impurity concentration for which the in-
+tegrated deviation is minimal. Remarkably, this agrees
+with the actual number of impurities used in the calcu-
+lation of Γ(E), shown as a vertical (red) dashed line in
+the lower part of Fig. 2(b). Such a coincidence suggests
+that it might be possible to use χ(n) as an inversion tool
+to ﬁnd the number of impurities in a quantum device

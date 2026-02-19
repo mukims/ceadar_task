@@ -1,0 +1,121 @@
+4
+n (%)
+0
+0.2
+0.4
+0.6
+0.8
+0.26
+0.28
+0.30
+0.32
+0.34
+χ
+- 8
+- 6
+- 4
+- 2
+0
+2
+0
+1
+2
+3
+Ε
+Γ
+(b)
+(a)
+(eV)
+FIG. 4. (a) The (red) solid line is the conductance spectrum
+Γ(E) obtained from a speciﬁc disorder realization of N = 10
+nitrogen impurities, i.e., n = 0.7%. The (blue) dashed line
+represents the CA conductance (M = 2000) calculated for the
+concentration that minimizes the misﬁt function χ, shown in
+(b) as a function of n. The misﬁt function was generated with
+an energy window deﬁned by E−= 0 and E+ = 2 eV. Dashed
+line indicates the exact concentration used to generate the
+input conductance.
+system. While such an increase may lead to the appear-
+ance of more minima in the misﬁt function, it remains a
+straightforward numerical task to identify them all.
+To show that this method is indeed model-independent
+we have also tested it in the case of a system fully de-
+scribed by Density Functional Theory (DFT). In particu-
+lar, DFT-based conductance calculations were performed
+for armchair GNR of sizes L = 100 unit cells and W = 3a
+containing a speciﬁc spatial distribution of N = 10 ni-
+trogen atoms as substitutional impurities, which corre-
+sponds to n = 0.7%. See SM [21] for details of the DFT
+calculations. The solid line in Fig. 4(a) shows the con-
+ductance spectrum Γ(E) of the system obtained within
+DFT, which will now serve as the input conductance for
+the inversion procedure. Regarding the CA conductance,
+there are two options on how ⟨Γ(E, n)⟩can be obtained.
+First option is to repeat the steps taken to generate Γ(E)
+of Fig. 4(a) over several diﬀerent disorder conﬁgurations.
+Bearing in mind that the impurity concentration n must
+be kept as a variable parameter, the averaging procedure
+deﬁned in Eq. (2) requires M diﬀerent conﬁgurations for
+every single value of n, which indicates how computa-
+tionally demanding this task might become if carried out
+entirely within DFT. The alternative option is to use the
+tight-binding (TB) model to carry out the CA calcula-
+tion. In this case the TB model provides a fast averaging
+strategy without necessarily compromising in accuracy.
+Here, we have selected the latter option and made
+use of DFT conductance spectra to identify suitable TB
+parameters that describe the nitrogen impurities in the
+GNR. See SM [21] for details, including a brief discus-
+sion on the choices available to extract TB parameters
+from DFT calculations [23–26] and their implementation
+in large scale transport calculations [27–29].
+The CA
+conductance ⟨Γ(E, n)⟩is then generated within the TB
+model employing M = 2000 realizations, leading subse-
+quently to the misﬁt function χ(n) of Fig. 4(b). Once
+again, χ(n) displays a minimum at exactly the same ni-
+trogen concentration used to generated the input conduc-
+tance Γ(E). Another indication of success can be seen by
+plotting the CA conductance evaluated at the minimiz-
+ing concentration of χ(n).
+Shown as a dashed line in
+Fig. 4(a), it has all the key features of Γ(E) even though
+both curves were calculated independently. Despite the
+computational complexity of obtaining the misﬁt func-
+tion entirely within DFT, this has also been tested and,
+reassuringly, we ﬁnd exactly the same answer (see SM
+[21] for details).
+All input spectra in this manuscript were calculated
+from known Hamiltonians because it is then straightfor-
+ward to test the success of the inversion method. Ulti-
+mately, inversions must be performed based on experi-
+mental conductance data of systems for which we do not
+have the full Hamiltonian.
+This calls for an inversion
+tool that is reliable, general and robust. The fact that
+our inversion strategy works for systems whose electronic
+structures are described by a simple TB model as well as
+by DFT calculations is indicative of the generality and
+robustness of this approach.
+That disorder is beneﬁcial to this inversion procedure
+is made evident by the distinction between the two pan-
+els of Fig. 2.
+Viewed at a ﬁxed energy, the deviation
+between the input and the CA conductance spectra re-
+veals very little about the system. In contrast, the misﬁt
+function entails a lot of information. The eﬃciency of the
+procedure relies on an ergodic hypothesis: conductance
+ﬂuctuations of a single sample versus energy are related
+to sample to sample ﬂuctuations at a ﬁxed energy. More
+precisely, the ergodic hypothesis assumes that a running
+average over a continuous parameter upon which the con-
+ductance depends is equivalent to sampling diﬀerent im-
+purity conﬁgurations. Here the continuous parameter is
+the energy, but the concept can be extended to a range of
+other quantities, e.g., magnetic ﬁeld, gate voltage, etc. A
+thorough mathematical discussion of this issue is beyond
+the scope of this manuscript, but it is worth mentioning
+that the ergodic hypothesis can be proven exactly for cer-
+tain models of disordered systems[30–32]. That explains
+why the energy integration induces a distinctive mini-
+mum in χ(n) since it is analogous to considering a wider

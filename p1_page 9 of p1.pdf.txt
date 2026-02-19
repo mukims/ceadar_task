@@ -1,0 +1,108 @@
+4
+...
+...
+...
+...
+...
+...
+...
+...
+...
+Scattering Region
+Pristine 
+Block
+Single Defect Block 
+Left Lead
+Right Lead
+FIG. 5.
+Illustrative diagram showing two diﬀerent building blocks patched together at a random order to generate the
+ﬁnite-concentration device. The Hamiltonian of both blocks were obtained from DFT calculations.
+ily found from ΓDFT
+1
+, which corresponds to the con-
+ductance in the presence of only a single impurity.
+It
+follows from a simple plot of the misﬁt function as a
+function of the impurity on-site potential, i.e. χ(ϵ) =
+R
+dE[ΓDFT
+1
+−ΓTB
+1 (ϵ)]2. In this case ΓTB
+1 (ϵ) is the tight-
+binding conductance of a ribbon with a single impurity
+with on-site potential ϵ.
+The function χ(ϵ) presents a
+very distinctive minimum, which we adopt as the value
+that best represents the scattering strength of the im-
+purity. It is worth mentioning that it is not necessary
+to know the exact location of the impurity in the DFT
+calculation. In fact, this is automatically accounted for
+by evaluating the misﬁt function χ(ϵ) for distinct impu-
+rity locations in the tight-binding part of the calculation.
+This is depicted in Fig.6. The absolute minimum found
+for χ(ϵ) corresponds to the impurity location used in the
+DFT-based conductance which also deﬁnes the value of
+the on-site potential to be adopted in the subsequent CA
+calculation.
+Finally, it is also instructive to compare the conduc-
+tance spectra ΓDFT
+1
+and ΓTB
+1 , the latter being calculated
+with the on-site potential ϵ obtained as described above.
+Bearing in mind that the misﬁt function was obtained
+by an integration in the 0 −0.2 eV energy range, the
+agreement between the two results shown in Fig.7 is yet
+another indication of the eﬀectiveness of our inversion
+procedure since both curves were calculated separately
+and independently.
+2. DFT-based misﬁt function
+Although the approach described above is undoubt-
+edly a good strategy to illustrate what can be achieved
+by carrying out the CA calculation within the TB model,
+it is by no means essential. To make this point evident,
+we have also carried out the CA part of the calculation
+entirely within DFT without availing of any TB parame-
+terization. For each concentration value, M=50 diﬀerent
+DFT disordered conﬁgurations were considered, each one
+of them generating conductance spectra with 500 energy
+values. The obtained misﬁt function χ(n) seen in Fig. 8
+displays the same distinctive trend seen previously and
+0
+1/6
+1/3
+1/2
+0.0
+0.5
+1.0
+1.5
+2.0
+ϵ
+y
+w
+FIG. 6. Contour plot of the misﬁt function χ to evaluate the
+impurity TB on-site energy ϵ.
+The single impurity sample
+conductance contains information about the location as well
+as the scattering strength of the impurity. The variable y/W
+indicates the impurity location, with y/W = 0 corresponding
+to the edge of the GNR and y/W = 1/2 marking its centre.
+- 8
+- 6
+- 4
+- 2
+0
+2
+0
+1
+2
+3
+Ε (eV)
+Γ
+FIG. 7. Conductance as a function of the energy (in eV). The
+(blue) solid line represents ΓDFT
+1
+and the (red) dashed line
+corresponds to ΓTB
+1 .

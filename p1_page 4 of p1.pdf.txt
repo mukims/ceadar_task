@@ -1,0 +1,121 @@
+5
+universe of disorder conﬁgurations in the CA procedure.
+The success of the inversion procedure will therefore de-
+pend on how wide the integration range is. See SM [21]
+for details on the suitable choices for integration limits.
+Another feature of the conductance ﬂuctuations of
+quantum devices [7, 33] is that the correlation function
+C(δX) = ⟨Γ(X + δX/2)Γ(X −δX/2)⟩−⟨Γ(X)⟩2 is also
+universal [31]. The latter is characterized by a correla-
+tion length δXcor that is system dependent. Therefore,
+the method works best when the integration interval ∆X
+is such that ∆X/δXcor ≫1. In our case, where we con-
+sider variations of the system chemical potential, δEcor
+scales with the mean level density times the transmission
+[34], which makes δEcor much larger than typical exper-
+imental temperatures, justifying our earlier claim that
+temperature has little eﬀect on our inversion procedure.
+This also explains why the energy window used in the
+misﬁt-function deﬁnition does not have to be very large.
+In summary, the inversion procedure presented here
+provides a mechanism capable of identifying the compo-
+sition of scattering centres in a quantum device by sim-
+ply looking at the energy dependence of the two-terminal
+device conductance.
+Assuming that the impurity type
+within the device is known, the procedure establishes the
+exact impurity concentration in it. Alternatively, if no in-
+formation is known a priori about the scatterers, the in-
+version identiﬁes their scattering strength and respective
+concentration. Finally, with a mixture of two diﬀerent
+types of impurities we are able to establish the fractional
+concentration of each component of the device. Despite
+being presented with GNR, the technique is not material-
+speciﬁc and performs remarkably well in the ballistic, dif-
+fusive and at the onset of localised transport regimes.
+The method is based on the notion that conductance
+ﬂuctuations carry little system-speciﬁc information, the
+average conductance depends smoothly on the variables
+of interest and on a standard ergodic hypothesis [30], re-
+quiring only an eﬀective (single-particle) description of
+the system. [35] This small set of conditions renders a
+very robust and versatile methodology that can extract
+structural and compositional information of quantum de-
+vices from standard transport measurements.
+The authors acknowledge support from FAPESP-
+(Grant # FAPESP 2017/02317-2, 2016/01343-7, and
+2017/10292-0),
+CNPq
+(Grants
+308801/2015-6
+and
+312716/2018-4), FAPERJ (Grant E-26/202.882/2018),
+and the ICTP-Simons Foundation Associate Scheme.
+The authors also thank the National Laboratory for Sci-
+entiﬁc Computing (LNCC/MCTI, Brazil) for providing
+HPC resources of the SDumont supercomputer, which
+have contributed to the results reported here. Discus-
+sions with S. R. Power and M. Kucukbas are greatly ac-
+knowledged.
+[1] S. Datta, Quantum Transport:
+Atom to Transistor
+(Cambridge University Press, 2005).
+[2] M. Bertero and M. Piana, Inverse problems in biomedical
+imaging: modeling and methods of solution, in Complex
+Systems in Biomedicine, edited by A. Quarteroni, L. For-
+maggia, and A. Veneziani (Springer Milan, Milano, 2006)
+pp. 1–33.
+[3] J. Virieux, A. Asnaashari, R. Brossier, L. Metivier,
+A. Ribodetti, and W. Zhou, An introduction to full
+waveform inversion, in Encyclopedia of Exploration Geo-
+physics (2017) p. 1.
+[4] J. Tromp, D. Komatitsch, and Q. Liu, Spectral-element
+and adjoint methods in seismology, Communications in
+Computational Physics 3, 1 (2008).
+[5] E. Dias and H. Vieira Neto, A novel approach to environ-
+ment mapping using sonar sensors and inverse problems,
+in Lecture Notes in Computer Science, Vol. 9287, edited
+by C. Dixon and K. Tuyls (Springer, 2004).
+[6] C. H. Lewenkopf and H. A. Weidenmüller, Stochastic ver-
+sus semiclassical approach to quantum chaotic scattering,
+Ann. Phys. 212, 53 (1991).
+[7] P. A. Lee and A. D. Stone, Universal conductance ﬂuc-
+tuations in metals, Phys. Rev. Lett. 55, 1622 (1985).
+[8] L. Tapasztó, G. Dobrik, P. Lambin, and L. P. Biro, Tai-
+loring the atomic structure of graphene nanoribbons by
+scanning tunnelling microscope lithography, Nat. Nan-
+otechnol. 3, 397 (2008).
+[9] Y. Meir and N. S. Wingreen, Landauer formula for the
+current through an interacting electron region, Phys.
+Rev. Lett. 68, 2512 (1992).
+[10] S. Datta, Electronic Transport in Mesoscopic Systems
+(Cambridge University Press, Cambridge, 1995).
+[11] A. H. Castro Neto, F. Guinea, N. M. R. Peres, K. S.
+Novoselov, and A. K. Geim, The electronic properties of
+graphene, Rev. Mod. Phys. 81, 109 (2009).
+[12] S. Das Sarma, S. Adam, E. H. Hwang, and E. Rossi,
+Electronic transport in two-dimensional graphene, Rev.
+Mod. Phys. 83, 407 (2011).
+[13] A. Lopez-Bezanilla and O. A. von Lilienfeld, Model-
+ing electronic quantum transport with machine learning,
+Phys. Rev. B 89, 235411 (2014).
+[14] K. Hansen, G. Montavon, F. Biegler, S. Fazli, M. Rupp,
+M. Scheﬄer, O. A. Von Lilienfeld, A. Tkatchenko, and
+K.-R. Müller, Assessment and validation of machine
+learning methods for predicting molecular atomization
+energies, J. Theor. Comput. Chem. 9, 3404 (2013).
+[15] B. Himmetoglu, Tree based machine learning frame-
+work for predicting ground state energies of molecules,
+J. Chem. Phys. 145, 134101 (2016).
+[16] H. Li, C. Collins, M. Tanha, G. J. Gordon, and D. J.
+Yaron, A density functional tight binding layer for deep
+learning of chemical hamiltonians, J. Chem. Theory
+Comput. 14, 5764 (2018).
+[17] C. Panosetti, A. Engelmann, L. Nemec, K. Reuter, and
+J. T. Margraf, Learning to use the force: Fitting repul-
+sive potentials in density-functional tight-binding with
+gaussian process regression (2019).
+[18] R. Xia and S. Kais, Quantum machine learning for elec-
+tronic structure calculations, Nat. Commun. 9, 4195
+(2018).
+[19] P. O. Dral, Quantum chemistry in the age of machine

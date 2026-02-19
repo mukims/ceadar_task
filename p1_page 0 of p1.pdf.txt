@@ -1,0 +1,103 @@
+Disorder information from conductance: a quantum inverse problem
+S. Mukim1, F. P. Amorim3, A. R. Rocha3, R. B. Muniz4, C. Lewenkopf4 and M. S. Ferreira1,2
+1School of Physics, Trinity College Dublin, Dublin 2, Ireland
+2Centre for Research on Adaptive Nanostructures and Nanodevices (CRANN) & Advanced Materials
+and Bioengineering Research (AMBER) Centre, Trinity College Dublin, Dublin 2, Ireland
+3 Instituto de Física Teórica, São Paulo State University, 01140-070, São Paulo, Brazil and
+4 Instituto de Física, Universidade Federal Fluminense, Brazil
+(Dated: July 27, 2020)
+It is straightforward to calculate the conductance of a quantum device once all its scattering cen-
+ters are fully speciﬁed. However, to do this in reverse, i.e., to ﬁnd information about the composition
+of scatterers in a device from its conductance, is an elusive task. This is particularly more chal-
+lenging in the presence of disorder. Here we propose a procedure in which valuable compositional
+information can be extracted from the seemingly noisy spectral conductance of a two-terminal dis-
+ordered quantum device. In particular, we put forward an inversion methodology that can identify
+the nature and respective concentration of randomly-distributed impurities by analyzing energy-
+dependent conductance ﬁngerprints. Results are shown for graphene nanoribbons as a case in point
+using both tight-binding and density functional theory simulations, indicating that this inversion
+technique is general, robust and can be employed to extract structural and compositional informa-
+tion of disordered mesoscopic devices from standard conductance measurements.
+Structures whose dimensions are comparable to or
+smaller than the electronic mean free path display trans-
+port features not associated with the classical ohmic be-
+haviour [1]. These are quantum features found by solving
+the Schrödinger equation once the system Hamiltonian
+is known. Indeed, it is straightforward to describe how
+current ﬂows in a quantum device by calculating its con-
+ductance once all scattering centres are speciﬁed. How-
+ever, to do this in reverse, i.e., to ﬁnd information about
+scatterers in a quantum device by simply looking at its
+conductance is rather challenging. This is a kind of In-
+verse Problem (IP) which consists of obtaining from a set
+of observations the causal factors that generated them in
+the ﬁrst place. IP are intrinsic parts of numerous visual-
+ization tools [2–5] but are not as common in the quantum
+realm, and even less so in the presence of disorder.
+Disorder makes the description of the impurity po-
+tential by inverse scattering methods quite a daunting
+task. Multiple scattering depends on the scatterers’ loca-
+tions and therefore likely to aﬀect the electronic dynam-
+ics in seemingly unpredictable ways. To make matters
+worse theory shows that quantum interference in chaotic
+[6] and/or diﬀusive systems [7] gives rise to ﬂuctuations
+whose statistical properties are universal, i.e. system in-
+dependent, indicating that standard IP methods are nei-
+ther practical nor useful in such situations.
+Here we give a diﬀerent twist to quantum IP ap-
+proaches and demonstrate that, instead of detrimental,
+disorder may be actually beneﬁcial to extracting infor-
+mation about scattering centres in a quantum device.
+In particular, we focus on the energy-dependent conduc-
+tance of a quantum system, hereafter referred to as the
+conductance spectrum, which will serve as the only in-
+put of the inversion procedure described here. This is
+a quantity normally obtained by standard experimental
+setups of a gated two-terminal device but may also be
+found by calculation once the underlying Hamiltonian is
+fully speciﬁed. Here we introduce our inversion method-
+ology by using the latter as a proxy for the former, i.e,
+calculated conductance spectra representing their exper-
+imental equivalent.
+The advantage of using calculated
+input functions is that we can refer back to the Hamil-
+tonian that generated them in the ﬁrst place, making it
+possible to assess the success of the inversion procedure.
+Let us start by deﬁning the system to be used through-
+out the manuscript.
+It consists of two electrodes sep-
+arated by a scattering region of length L and width
+W, as illustrated in Fig. 1(a), a rather typical setup
+of electronic transport.
+The distinction between the
+leads and the central region is that the latter contains
+impurities as scattering centres [8].
+In the linear re-
+sponse regime, the Landauer conductance reads G =
+2e2/h
+R
+dE(−∂f/∂E)Γ(E), where f(E) is the Fermi dis-
+tribution and Γ(E) is the dimensionless conductance (or
+transmission) given by [9, 10]
+Γ(E) = tr
+
+Gr(E)ΓR(E)Ga(E)ΓL(E)
+
+(1)
+Here Gr (Ga = [Gr]†) is the full retarded (advanced)
+Green function and ΓL (ΓR) is the line width function
+accounting for the injection and lifetime of states in the
+left (right) contact. For simplicity, we consider the zero-
+temperature limit G = 2e2/h Γ(E). Thermal corrections
+will be shown to have little eﬀect on our procedure.
+The expression for Γ in Eq. (1) is model-independent,
+i.e., once the Hamiltonian is known one can ﬁnd the cor-
+responding Green function and obtain the energy depen-
+dent conductance of the system [9].
+We focus on sys-
+tems with relatively simple electronic structures, namely
+graphene nanoribbons (GNR). Although not an essen-
+tial requirement, it helps to illustrate the methodology
+since GNR are well described by the tight-binding model
+[11, 12].
+In this case the nearest-neighbour hopping t
+arXiv:2007.12504v1  [cond-mat.mes-hall]  24 Jul 2020

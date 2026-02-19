@@ -1,0 +1,150 @@
+3
+0.1
+0.4
+0.7
+Δ Γ
+0
+2
+4
+6
+8
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+n
+χ
+(%)
+(b)
+(a)
+FIG. 2.
+(a) Absolute value of the conductance deviation
+|∆Γ(E, n)| as a function of the impurity concentration n (in
+percentage) for a ﬁxed energy (E = 0.42t). (b) Misﬁt func-
+tion χ (in arbitrary units) as a function of n. The vertical
+(red) dashed line on the lower part of the panel indicates the
+real number of impurities used to generate the sample conduc-
+tance, which coincides with the minimum of χ(n). The (black)
+dotted line in the upper part of the panel is the approxi-
+mate concentration n∗. Integration limits were E−= 0.5t and
+E+ = 1.5t and the solid (blue) line is simply a guide to the
+eyes.
+from simple conductance measurements. Note that no
+prior knowledge of the actual number of impurities was
+necessary to identify the misﬁt-function minimum.
+To demonstrate that the agreement between the min-
+imizing concentration of χ and the actual impurity con-
+centration is not a fortuitous coincidence, we proceed to
+write the CA conductance [10] to linear order in n
+⟨Γ(E, n)⟩= Γ0(E) −β(E) n,
+(5)
+where β(E) is the derivative of ⟨Γ(E, n)⟩with respect
+to n evaluated at n = 0. The misﬁt function χ(n) will
+naturally develop a minimum at n∗= −B/A, where
+A =
+Z E+
+E−
+dEβ2(E) and B =
+Z E+
+E−
+dEβ(E)
+
+Γ(E)−Γ0(E)
+
+.
+(6)
+The vertical (black) dotted line shown on the upper part
+of Fig. 2(b) indicates the value of n∗. Note that both
+the dotted and dashed lines are aligned, i.e., n∗coin-
+cides not only with the actual concentration n but also
+with the impurity concentration that minimizes χ(n). In
+fact, n∗is an excellent approximation up to 3% impurity
+concentration and provides a simple yet accurate way of
+identifying the misﬁt function minimum. [22]
+Besides the impurity concentration, other degrees of
+freedom can be added to the IP in question. Let us now
+consider an arbitrary sample conductance but this time
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1
+2
+3
+4
+5
+ϵ
+0
+0.2
+0.4
+0.6
+0.8
+0.6
+1.2
+1.4
+1.6
+(a)
+n
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
+1
+2
+3
+4
+5
+6
+7
+8
+(b)
+nB
+nA
+FIG. 3. 2D contour plots of the logarithm of the misﬁt func-
+tion. Dashed lines in the plots indicate the values of the re-
+spective quantities used in the underlying Hamiltonians. (a):
+χ as a function of n and ϵ. (b): χ as a function of na and nb.
+assume that nothing is known about the impurity, i.e.,
+neither its concentration n nor its on-site potential ϵ. In
+this case, the input Γ(E) is simply treated as the con-
+ductance of a system with an unknown number of un-
+speciﬁed impurities. To calculate the misﬁt function we
+must compute the CA conductance which will now de-
+pend on ϵ as well as n.
+A 2D contour plot of χ as a
+function of these two quantities is shown in Fig. 3(a).
+A distinctive minimum is seen which, once again, coin-
+cides with the exact values used to generate the input
+conductance, shown as dashed lines. Consequently, both
+the type and concentration of scattering centres inside
+a quantum device can be identiﬁed through its energy-
+dependent conductance ﬁngerprints. Furthermore, still
+using two degrees of freedom, the IP can also be im-
+plemented in the case of two types of impurities with
+unknown concentrations. In other words, two impurities
+described by known on-site potentials ϵA and ϵB are ran-
+domly dispersed with respective concentrations nA and
+nB, which are unknown. Writing the CA conductance
+as a function of both concentrations leads to the mis-
+ﬁt function being plotted now as a function of the same
+quantities in Fig. 3(b). The dashed lines stand for the
+actual values nA and nB.
+They accurately match the
+concentration values that minimize the misﬁt function.
+This indicates that it is possible to increase the number
+of degrees of freedom in the inversion procedure, oﬀering
+variety and versatility in how we wish to interrogate the

@@ -1,0 +1,100 @@
+Disorder information from conductance: a quantum inverse problem
+(Supplemental Material)
+S. Mukim, F. P. Amorim, A. R. Rocha, R. B. Muniz, C. Lewenkopf, and M. S. Ferreira
+I. INVERSION PROCEDURE: TECHNICAL
+ASPECTS
+Here we provide details of the inversion procedure im-
+plementation and an analysis of its accuracy. For that
+purpose we use the model system introduced in the main
+text as an illustrative example. Our strategy relies on
+calculating the conductance spectra that is used as in-
+put functions of the inversion method simply because
+we can refer back to the Hamiltonian that generated
+them in the ﬁrst place, allowing us to establish whether
+or not the inversion was successful.
+A simple test is
+to start from the Hamiltonian of an arbitrary speciﬁc
+conﬁguration of N impurities randomly located and cal-
+culate the corresponding conductance spectrum.
+This
+translates into an impurity concentration n (see main
+manuscript). The inversion works by ﬁnding the concen-
+tration that minimizes the misﬁt function, which we call
+nmin. We then deﬁne the inversion procedure accuracy
+as α = |n −nmin|/n. In what follows we analyse how α
+depends on a few essential parameters and show that a
+careful tuning of such parameters may improve the suc-
+cess rate of the inversion methodology.
+1. Accuracy of the inversion procedure
+Figure 1 shows the inversion accuracy α for graphene
+nanoribbons (GNR) with W = 3a and L = 100 unit
+cells as a function of impurity concentration. One can
+see that α is very small for all concentrations below 8%,
+clearly indicating that our inversion tool is very reliable
+for dilute impurity concentrations.
+It is worth recalling that we can not only conﬁrm
+what the real impurity concentration that generated the
+Hamiltonian is but also the exact locations of the ran-
+domly placed impurities.
+Interestingly, as the concen-
+tration increases we ﬁnd a growing number of impurities
+that are adjacent to one another forming pairs that may
+act as if they were isolated scatterers. For example, a ran-
+domly selected conﬁguration of 15 impurities may have
+13 of them well isolated whereas the remainder are clus-
+tered into a pair. In cases like that the inversion ﬁnds a
+concentration that would correspond to 14 impurities for
+the simple fact that the cluster may actually behave as
+a single scatterer. This explains why the inversion error
+also increases with the concentration. It is possible to
+reduce the error further by accounting for the probabil-
+ity of forming such pairs. By relaxing the assumption
+2
+4
+6
+8
+10
+0.00
+0.05
+0.10
+0.15
+0.20
+0.25
+0.30
+n (%)
+α
+FIG. 1.
+Inversion accuracy α plotted as a function of the
+impurity concentration n for a GNR with W = 3a and L =
+100 unit cells. The impurity on-site potential was arbitrarily
+chosen as ϵ = 0.5t.
+of short-range uncorrelated disorder originally made, we
+may adopt a similar strategy to the one used to produce
+Figure 3(b) of the main text, i.e., where we treat im-
+purity pairs as if they corresponded to a diﬀerent class
+of impurities. In this way it is straightforward to dis-
+cern between isolated and paired impurities, leading to
+an improved accuracy that can be sustained up to higher
+concentrations.
+2. Averaging energy window
+The misﬁt function χ depends on the integration limits
+E+ and E−, that is, the averaging energy window.
+Figure 2 plots the inversion error α as a function of
+(E+ −E−)/Z, where Z is the bandwidth.
+Note that
+α is large for very narrow energy windows, in perfect
+agreement with the single-energy featureless results of
+Fig. 2(a) presented in the main manuscript. Note that
+any window at least 20% of the bandwidth generates ex-
+cellent results.
+In practical situations, it can be a diﬃcult task to ob-
+tain the conductance spectrum over a signiﬁcant portion
+of the bandwidth.
+We argue that good accuracy, i.e.,
+small values of α, can be obtained with fairly small av-
+eraging windows. The idea of averaging is to eliminate
+the universal conductance ﬂuctuations from the misﬁt
+function χ. Hence, the averaging window has to be suf-
+ﬁciently broad to contain a large number of oscillations
+of Γ(E). More precisely, ∆E/δEcor ≫1, where δEcor
+arXiv:2007.12504v1  [cond-mat.mes-hall]  24 Jul 2020
