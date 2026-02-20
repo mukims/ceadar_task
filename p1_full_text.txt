@@ -1,0 +1,1211 @@
+Disorder information from conductance: a quantum inverse problem
+S. Mukim1, F. P. Amorim3, A. R. Rocha3, R. B. Muniz4, C. Lewenkopf4 and M. S. Ferreira1,2
+1School of Physics, Trinity College Dublin, Dublin 2, Ireland
+2Centre for Research on Adaptive Nanostructures and Nanodevices (CRANN) & Advanced Materials
+and Bioengineering Research (AMBER) Centre, Trinity College Dublin, Dublin 2, Ireland
+3 Instituto de Física Teórica, São Paulo State University, 01140-070, São Paulo, Brazil and
+4 Instituto de Física, Universidade Federal Fluminense, Brazil
+(Dated: July 27, 2020)
+It is straightforward to calculate the conductance of a quantum device once all its scattering cen-
+ters are fully speciﬁed. However, to do this in reverse, i.e., to ﬁnd information about the composition
+of scatterers in a device from its conductance, is an elusive task. This is particularly more chal-
+lenging in the presence of disorder. Here we propose a procedure in which valuable compositional
+information can be extracted from the seemingly noisy spectral conductance of a two-terminal dis-
+ordered quantum device. In particular, we put forward an inversion methodology that can identify
+the nature and respective concentration of randomly-distributed impurities by analyzing energy-
+dependent conductance ﬁngerprints. Results are shown for graphene nanoribbons as a case in point
+using both tight-binding and density functional theory simulations, indicating that this inversion
+technique is general, robust and can be employed to extract structural and compositional informa-
+tion of disordered mesoscopic devices from standard conductance measurements.
+Structures whose dimensions are comparable to or
+smaller than the electronic mean free path display trans-
+port features not associated with the classical ohmic be-
+haviour [1]. These are quantum features found by solving
+the Schrödinger equation once the system Hamiltonian
+is known. Indeed, it is straightforward to describe how
+current ﬂows in a quantum device by calculating its con-
+ductance once all scattering centres are speciﬁed. How-
+ever, to do this in reverse, i.e., to ﬁnd information about
+scatterers in a quantum device by simply looking at its
+conductance is rather challenging. This is a kind of In-
+verse Problem (IP) which consists of obtaining from a set
+of observations the causal factors that generated them in
+the ﬁrst place. IP are intrinsic parts of numerous visual-
+ization tools [2–5] but are not as common in the quantum
+realm, and even less so in the presence of disorder.
+Disorder makes the description of the impurity po-
+tential by inverse scattering methods quite a daunting
+task. Multiple scattering depends on the scatterers’ loca-
+tions and therefore likely to aﬀect the electronic dynam-
+ics in seemingly unpredictable ways. To make matters
+worse theory shows that quantum interference in chaotic
+[6] and/or diﬀusive systems [7] gives rise to ﬂuctuations
+whose statistical properties are universal, i.e. system in-
+dependent, indicating that standard IP methods are nei-
+ther practical nor useful in such situations.
+Here we give a diﬀerent twist to quantum IP ap-
+proaches and demonstrate that, instead of detrimental,
+disorder may be actually beneﬁcial to extracting infor-
+mation about scattering centres in a quantum device.
+In particular, we focus on the energy-dependent conduc-
+tance of a quantum system, hereafter referred to as the
+conductance spectrum, which will serve as the only in-
+put of the inversion procedure described here. This is
+a quantity normally obtained by standard experimental
+setups of a gated two-terminal device but may also be
+found by calculation once the underlying Hamiltonian is
+fully speciﬁed. Here we introduce our inversion method-
+ology by using the latter as a proxy for the former, i.e,
+calculated conductance spectra representing their exper-
+imental equivalent.
+The advantage of using calculated
+input functions is that we can refer back to the Hamil-
+tonian that generated them in the ﬁrst place, making it
+possible to assess the success of the inversion procedure.
+Let us start by deﬁning the system to be used through-
+out the manuscript.
+It consists of two electrodes sep-
+arated by a scattering region of length L and width
+W, as illustrated in Fig. 1(a), a rather typical setup
+of electronic transport.
+The distinction between the
+leads and the central region is that the latter contains
+impurities as scattering centres [8].
+In the linear re-
+sponse regime, the Landauer conductance reads G =
+2e2/h
+R
+dE(−∂f/∂E)Γ(E), where f(E) is the Fermi dis-
+tribution and Γ(E) is the dimensionless conductance (or
+transmission) given by [9, 10]
+Γ(E) = tr
+
+Gr(E)ΓR(E)Ga(E)ΓL(E)
+
+(1)
+Here Gr (Ga = [Gr]†) is the full retarded (advanced)
+Green function and ΓL (ΓR) is the line width function
+accounting for the injection and lifetime of states in the
+left (right) contact. For simplicity, we consider the zero-
+temperature limit G = 2e2/h Γ(E). Thermal corrections
+will be shown to have little eﬀect on our procedure.
+The expression for Γ in Eq. (1) is model-independent,
+i.e., once the Hamiltonian is known one can ﬁnd the cor-
+responding Green function and obtain the energy depen-
+dent conductance of the system [9].
+We focus on sys-
+tems with relatively simple electronic structures, namely
+graphene nanoribbons (GNR). Although not an essen-
+tial requirement, it helps to illustrate the methodology
+since GNR are well described by the tight-binding model
+[11, 12].
+In this case the nearest-neighbour hopping t
+arXiv:2007.12504v1  [cond-mat.mes-hall]  24 Jul 2020
+ 2
+L
+W
+(a)
+0
+1
+2
+3
+0
+1
+2
+3
+Γ
+Ε/t
+(b)
+FIG. 1. (a) Schematic diagram of the system under consid-
+eration. Two semi-inﬁnite leads of width W are separated by
+a region of length L containing a concentration n of impuri-
+ties represented by red dots. (b) Calculated conductance for
+a system made of a graphene nanoribbon of length L = 100
+unit cells as a function of the chemical potential (in units
+of t).
+The dashed line corresponds to the conductance of
+the pristine system, i.e., in the absence of impurities. The
+solid line shows the conductance for a disordered conﬁgura-
+tion containing N = 42 substitutional impurities (ϵ = 0.5t),
+which accounts for a concentration of n = 3%.
+and the on-site energies fully deﬁne the electronic struc-
+ture of the nanoribbon.
+Fig. 1(b) shows the energy-
+dependent conductance for an armchair-edged GNR of
+width W = 3a, a = 2.7Å being the graphene lattice pa-
+rameter. The dashed line is the conductance spectrum
+Γ0 for the pristine GNR. Results are shown for positive
+energies knowing that Γ0(E) = Γ0(−E).
+We now introduce N substitutional impurities.
+It
+is convenient to express the impurity number also as
+the percentage concentration n deﬁned as n = 100 ×
+(N/Ntot), where Ntot is the total number of sites in the
+central region. Both N and n will be used interchange-
+ably. The scattering strength of the impurities is char-
+acterized by the contrast between their on-site potential
+ϵ relative to that of the host, chosen to be zero.
+The
+solid line of Fig. 1(b) shows the conductance for the GNR
+with N = 42 impurities, ϵ = 0.5 t and L = 100 unit cells
+(n = 3%). Impurity locations were randomly selected but
+kept ﬁxed in the underlying Hamiltonian that generated
+the conductance Γ(E) of Fig. 1(b).
+Being the conductance sensitive to the locations of
+scattering centres, it is diﬃcult to devise an inversion tool
+capable of spatially mapping all impurities from the con-
+ductance spectrum information alone. The brute-force
+method of comparing the input conductance Γ(E) with
+those of every possible disorder conﬁguration is not viable
+because the number of combinations is too large for any
+practical situation. Machine-learning strategies are cur-
+rently being attempted to overcome this combinatorial
+hurdle [13–20] but spatial mapping of quantum devices
+through inversion remains challenging.
+Nevertheless, given the conductance spectrum Γ(E) of
+a device, one might ask whether it is possible to ﬁnd the
+exact number of scattering centres in it. This may not
+reveal the position of every impurity but it is a valuable
+piece of information and a lot more feasible to obtain.
+While the brute-force approach remains impractical, we
+must account for as many disorder realizations as possi-
+ble. We deﬁne the conﬁgurationally averaged (CA) con-
+ductance ⟨Γ⟩by summing over M realizations with the
+same number N of impurities (or concentration n), i.e.,
+⟨Γ(E, n)⟩= 1
+M
+M
+X
+j=1
+Γj(E) ,
+(2)
+where j labels the diﬀerent conﬁgurations. See SM [21]
+for a discussion on the suitable choices for M.
+The deviation between an arbitrary conductance result
+and its CA counterpart is given by
+∆Γ(E, n) = Γ(E) −⟨Γ(E, n)⟩
+(3)
+We reiterate that Γ(E) acts as the input conductance
+spectrum of a single realization and represents the im-
+mutable conductance of the device under investigation.
+The CA conductance spectrum, on the other hand, re-
+ﬂects the contribution of very many conﬁgurations and
+depends, in addition, on the impurity concentration. By
+treating n as a variable parameter, we can look for mini-
+mization trends in ∆Γ(E, n) that might indicate the real
+concentration in the device. Unfortunately, when plot-
+ted as a function of n in Fig. 2(a), the deviation ∆Γ for
+a ﬁxed energy E is featureless with wide error bars that
+result from repeating the calculation 1000 times.
+However, much cleaner trends are seen when ∆Γ is
+used in the form of a functional that measures how good
+a match Γ(E) and ⟨Γ(E, n)⟩are. This quantity is the
+misﬁt function χ(n) deﬁned as
+χ(n) =
+Z E+
+E−
+dE [ Γ(E) −⟨Γ(E, n)⟩]2 ,
+(4)
+where E−and E+ establish the energy window over which
+the integration takes place. Fig. 2(b) shows χ as a func-
+tion of n and displays a more distinctive trend with
+smaller error bars.
+The plot indicates that there is a
+sweet spot in impurity concentration for which the in-
+tegrated deviation is minimal. Remarkably, this agrees
+with the actual number of impurities used in the calcu-
+lation of Γ(E), shown as a vertical (red) dashed line in
+the lower part of Fig. 2(b). Such a coincidence suggests
+that it might be possible to use χ(n) as an inversion tool
+to ﬁnd the number of impurities in a quantum device
+ 3
+0.1
+0.4
+0.7
+Δ Γ
+0
+2
+4
+6
+8
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+n
+χ
+(%)
+(b)
+(a)
+FIG. 2.
+(a) Absolute value of the conductance deviation
+|∆Γ(E, n)| as a function of the impurity concentration n (in
+percentage) for a ﬁxed energy (E = 0.42t). (b) Misﬁt func-
+tion χ (in arbitrary units) as a function of n. The vertical
+(red) dashed line on the lower part of the panel indicates the
+real number of impurities used to generate the sample conduc-
+tance, which coincides with the minimum of χ(n). The (black)
+dotted line in the upper part of the panel is the approxi-
+mate concentration n∗. Integration limits were E−= 0.5t and
+E+ = 1.5t and the solid (blue) line is simply a guide to the
+eyes.
+from simple conductance measurements. Note that no
+prior knowledge of the actual number of impurities was
+necessary to identify the misﬁt-function minimum.
+To demonstrate that the agreement between the min-
+imizing concentration of χ and the actual impurity con-
+centration is not a fortuitous coincidence, we proceed to
+write the CA conductance [10] to linear order in n
+⟨Γ(E, n)⟩= Γ0(E) −β(E) n,
+(5)
+where β(E) is the derivative of ⟨Γ(E, n)⟩with respect
+to n evaluated at n = 0. The misﬁt function χ(n) will
+naturally develop a minimum at n∗= −B/A, where
+A =
+Z E+
+E−
+dEβ2(E) and B =
+Z E+
+E−
+dEβ(E)
+
+Γ(E)−Γ0(E)
+
+.
+(6)
+The vertical (black) dotted line shown on the upper part
+of Fig. 2(b) indicates the value of n∗. Note that both
+the dotted and dashed lines are aligned, i.e., n∗coin-
+cides not only with the actual concentration n but also
+with the impurity concentration that minimizes χ(n). In
+fact, n∗is an excellent approximation up to 3% impurity
+concentration and provides a simple yet accurate way of
+identifying the misﬁt function minimum. [22]
+Besides the impurity concentration, other degrees of
+freedom can be added to the IP in question. Let us now
+consider an arbitrary sample conductance but this time
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1
+2
+3
+4
+5
+ϵ
+0
+0.2
+0.4
+0.6
+0.8
+0.6
+1.2
+1.4
+1.6
+(a)
+n
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
+1
+2
+3
+4
+5
+6
+7
+8
+(b)
+nB
+nA
+FIG. 3. 2D contour plots of the logarithm of the misﬁt func-
+tion. Dashed lines in the plots indicate the values of the re-
+spective quantities used in the underlying Hamiltonians. (a):
+χ as a function of n and ϵ. (b): χ as a function of na and nb.
+assume that nothing is known about the impurity, i.e.,
+neither its concentration n nor its on-site potential ϵ. In
+this case, the input Γ(E) is simply treated as the con-
+ductance of a system with an unknown number of un-
+speciﬁed impurities. To calculate the misﬁt function we
+must compute the CA conductance which will now de-
+pend on ϵ as well as n.
+A 2D contour plot of χ as a
+function of these two quantities is shown in Fig. 3(a).
+A distinctive minimum is seen which, once again, coin-
+cides with the exact values used to generate the input
+conductance, shown as dashed lines. Consequently, both
+the type and concentration of scattering centres inside
+a quantum device can be identiﬁed through its energy-
+dependent conductance ﬁngerprints. Furthermore, still
+using two degrees of freedom, the IP can also be im-
+plemented in the case of two types of impurities with
+unknown concentrations. In other words, two impurities
+described by known on-site potentials ϵA and ϵB are ran-
+domly dispersed with respective concentrations nA and
+nB, which are unknown. Writing the CA conductance
+as a function of both concentrations leads to the mis-
+ﬁt function being plotted now as a function of the same
+quantities in Fig. 3(b). The dashed lines stand for the
+actual values nA and nB.
+They accurately match the
+concentration values that minimize the misﬁt function.
+This indicates that it is possible to increase the number
+of degrees of freedom in the inversion procedure, oﬀering
+variety and versatility in how we wish to interrogate the
+ 4
+n (%)
+0
+0.2
+0.4
+0.6
+0.8
+0.26
+0.28
+0.30
+0.32
+0.34
+χ
+- 8
+- 6
+- 4
+- 2
+0
+2
+0
+1
+2
+3
+Ε
+Γ
+(b)
+(a)
+(eV)
+FIG. 4. (a) The (red) solid line is the conductance spectrum
+Γ(E) obtained from a speciﬁc disorder realization of N = 10
+nitrogen impurities, i.e., n = 0.7%. The (blue) dashed line
+represents the CA conductance (M = 2000) calculated for the
+concentration that minimizes the misﬁt function χ, shown in
+(b) as a function of n. The misﬁt function was generated with
+an energy window deﬁned by E−= 0 and E+ = 2 eV. Dashed
+line indicates the exact concentration used to generate the
+input conductance.
+system. While such an increase may lead to the appear-
+ance of more minima in the misﬁt function, it remains a
+straightforward numerical task to identify them all.
+To show that this method is indeed model-independent
+we have also tested it in the case of a system fully de-
+scribed by Density Functional Theory (DFT). In particu-
+lar, DFT-based conductance calculations were performed
+for armchair GNR of sizes L = 100 unit cells and W = 3a
+containing a speciﬁc spatial distribution of N = 10 ni-
+trogen atoms as substitutional impurities, which corre-
+sponds to n = 0.7%. See SM [21] for details of the DFT
+calculations. The solid line in Fig. 4(a) shows the con-
+ductance spectrum Γ(E) of the system obtained within
+DFT, which will now serve as the input conductance for
+the inversion procedure. Regarding the CA conductance,
+there are two options on how ⟨Γ(E, n)⟩can be obtained.
+First option is to repeat the steps taken to generate Γ(E)
+of Fig. 4(a) over several diﬀerent disorder conﬁgurations.
+Bearing in mind that the impurity concentration n must
+be kept as a variable parameter, the averaging procedure
+deﬁned in Eq. (2) requires M diﬀerent conﬁgurations for
+every single value of n, which indicates how computa-
+tionally demanding this task might become if carried out
+entirely within DFT. The alternative option is to use the
+tight-binding (TB) model to carry out the CA calcula-
+tion. In this case the TB model provides a fast averaging
+strategy without necessarily compromising in accuracy.
+Here, we have selected the latter option and made
+use of DFT conductance spectra to identify suitable TB
+parameters that describe the nitrogen impurities in the
+GNR. See SM [21] for details, including a brief discus-
+sion on the choices available to extract TB parameters
+from DFT calculations [23–26] and their implementation
+in large scale transport calculations [27–29].
+The CA
+conductance ⟨Γ(E, n)⟩is then generated within the TB
+model employing M = 2000 realizations, leading subse-
+quently to the misﬁt function χ(n) of Fig. 4(b). Once
+again, χ(n) displays a minimum at exactly the same ni-
+trogen concentration used to generated the input conduc-
+tance Γ(E). Another indication of success can be seen by
+plotting the CA conductance evaluated at the minimiz-
+ing concentration of χ(n).
+Shown as a dashed line in
+Fig. 4(a), it has all the key features of Γ(E) even though
+both curves were calculated independently. Despite the
+computational complexity of obtaining the misﬁt func-
+tion entirely within DFT, this has also been tested and,
+reassuringly, we ﬁnd exactly the same answer (see SM
+[21] for details).
+All input spectra in this manuscript were calculated
+from known Hamiltonians because it is then straightfor-
+ward to test the success of the inversion method. Ulti-
+mately, inversions must be performed based on experi-
+mental conductance data of systems for which we do not
+have the full Hamiltonian.
+This calls for an inversion
+tool that is reliable, general and robust. The fact that
+our inversion strategy works for systems whose electronic
+structures are described by a simple TB model as well as
+by DFT calculations is indicative of the generality and
+robustness of this approach.
+That disorder is beneﬁcial to this inversion procedure
+is made evident by the distinction between the two pan-
+els of Fig. 2.
+Viewed at a ﬁxed energy, the deviation
+between the input and the CA conductance spectra re-
+veals very little about the system. In contrast, the misﬁt
+function entails a lot of information. The eﬃciency of the
+procedure relies on an ergodic hypothesis: conductance
+ﬂuctuations of a single sample versus energy are related
+to sample to sample ﬂuctuations at a ﬁxed energy. More
+precisely, the ergodic hypothesis assumes that a running
+average over a continuous parameter upon which the con-
+ductance depends is equivalent to sampling diﬀerent im-
+purity conﬁgurations. Here the continuous parameter is
+the energy, but the concept can be extended to a range of
+other quantities, e.g., magnetic ﬁeld, gate voltage, etc. A
+thorough mathematical discussion of this issue is beyond
+the scope of this manuscript, but it is worth mentioning
+that the ergodic hypothesis can be proven exactly for cer-
+tain models of disordered systems[30–32]. That explains
+why the energy integration induces a distinctive mini-
+mum in χ(n) since it is analogous to considering a wider
+ 5
+universe of disorder conﬁgurations in the CA procedure.
+The success of the inversion procedure will therefore de-
+pend on how wide the integration range is. See SM [21]
+for details on the suitable choices for integration limits.
+Another feature of the conductance ﬂuctuations of
+quantum devices [7, 33] is that the correlation function
+C(δX) = ⟨Γ(X + δX/2)Γ(X −δX/2)⟩−⟨Γ(X)⟩2 is also
+universal [31]. The latter is characterized by a correla-
+tion length δXcor that is system dependent. Therefore,
+the method works best when the integration interval ∆X
+is such that ∆X/δXcor ≫1. In our case, where we con-
+sider variations of the system chemical potential, δEcor
+scales with the mean level density times the transmission
+[34], which makes δEcor much larger than typical exper-
+imental temperatures, justifying our earlier claim that
+temperature has little eﬀect on our inversion procedure.
+This also explains why the energy window used in the
+misﬁt-function deﬁnition does not have to be very large.
+In summary, the inversion procedure presented here
+provides a mechanism capable of identifying the compo-
+sition of scattering centres in a quantum device by sim-
+ply looking at the energy dependence of the two-terminal
+device conductance.
+Assuming that the impurity type
+within the device is known, the procedure establishes the
+exact impurity concentration in it. Alternatively, if no in-
+formation is known a priori about the scatterers, the in-
+version identiﬁes their scattering strength and respective
+concentration. Finally, with a mixture of two diﬀerent
+types of impurities we are able to establish the fractional
+concentration of each component of the device. Despite
+being presented with GNR, the technique is not material-
+speciﬁc and performs remarkably well in the ballistic, dif-
+fusive and at the onset of localised transport regimes.
+The method is based on the notion that conductance
+ﬂuctuations carry little system-speciﬁc information, the
+average conductance depends smoothly on the variables
+of interest and on a standard ergodic hypothesis [30], re-
+quiring only an eﬀective (single-particle) description of
+the system. [35] This small set of conditions renders a
+very robust and versatile methodology that can extract
+structural and compositional information of quantum de-
+vices from standard transport measurements.
+The authors acknowledge support from FAPESP-
+(Grant # FAPESP 2017/02317-2, 2016/01343-7, and
+2017/10292-0),
+CNPq
+(Grants
+308801/2015-6
+and
+312716/2018-4), FAPERJ (Grant E-26/202.882/2018),
+and the ICTP-Simons Foundation Associate Scheme.
+The authors also thank the National Laboratory for Sci-
+entiﬁc Computing (LNCC/MCTI, Brazil) for providing
+HPC resources of the SDumont supercomputer, which
+have contributed to the results reported here. Discus-
+sions with S. R. Power and M. Kucukbas are greatly ac-
+knowledged.
+[1] S. Datta, Quantum Transport:
+Atom to Transistor
+(Cambridge University Press, 2005).
+[2] M. Bertero and M. Piana, Inverse problems in biomedical
+imaging: modeling and methods of solution, in Complex
+Systems in Biomedicine, edited by A. Quarteroni, L. For-
+maggia, and A. Veneziani (Springer Milan, Milano, 2006)
+pp. 1–33.
+[3] J. Virieux, A. Asnaashari, R. Brossier, L. Metivier,
+A. Ribodetti, and W. Zhou, An introduction to full
+waveform inversion, in Encyclopedia of Exploration Geo-
+physics (2017) p. 1.
+[4] J. Tromp, D. Komatitsch, and Q. Liu, Spectral-element
+and adjoint methods in seismology, Communications in
+Computational Physics 3, 1 (2008).
+[5] E. Dias and H. Vieira Neto, A novel approach to environ-
+ment mapping using sonar sensors and inverse problems,
+in Lecture Notes in Computer Science, Vol. 9287, edited
+by C. Dixon and K. Tuyls (Springer, 2004).
+[6] C. H. Lewenkopf and H. A. Weidenmüller, Stochastic ver-
+sus semiclassical approach to quantum chaotic scattering,
+Ann. Phys. 212, 53 (1991).
+[7] P. A. Lee and A. D. Stone, Universal conductance ﬂuc-
+tuations in metals, Phys. Rev. Lett. 55, 1622 (1985).
+[8] L. Tapasztó, G. Dobrik, P. Lambin, and L. P. Biro, Tai-
+loring the atomic structure of graphene nanoribbons by
+scanning tunnelling microscope lithography, Nat. Nan-
+otechnol. 3, 397 (2008).
+[9] Y. Meir and N. S. Wingreen, Landauer formula for the
+current through an interacting electron region, Phys.
+Rev. Lett. 68, 2512 (1992).
+[10] S. Datta, Electronic Transport in Mesoscopic Systems
+(Cambridge University Press, Cambridge, 1995).
+[11] A. H. Castro Neto, F. Guinea, N. M. R. Peres, K. S.
+Novoselov, and A. K. Geim, The electronic properties of
+graphene, Rev. Mod. Phys. 81, 109 (2009).
+[12] S. Das Sarma, S. Adam, E. H. Hwang, and E. Rossi,
+Electronic transport in two-dimensional graphene, Rev.
+Mod. Phys. 83, 407 (2011).
+[13] A. Lopez-Bezanilla and O. A. von Lilienfeld, Model-
+ing electronic quantum transport with machine learning,
+Phys. Rev. B 89, 235411 (2014).
+[14] K. Hansen, G. Montavon, F. Biegler, S. Fazli, M. Rupp,
+M. Scheﬄer, O. A. Von Lilienfeld, A. Tkatchenko, and
+K.-R. Müller, Assessment and validation of machine
+learning methods for predicting molecular atomization
+energies, J. Theor. Comput. Chem. 9, 3404 (2013).
+[15] B. Himmetoglu, Tree based machine learning frame-
+work for predicting ground state energies of molecules,
+J. Chem. Phys. 145, 134101 (2016).
+[16] H. Li, C. Collins, M. Tanha, G. J. Gordon, and D. J.
+Yaron, A density functional tight binding layer for deep
+learning of chemical hamiltonians, J. Chem. Theory
+Comput. 14, 5764 (2018).
+[17] C. Panosetti, A. Engelmann, L. Nemec, K. Reuter, and
+J. T. Margraf, Learning to use the force: Fitting repul-
+sive potentials in density-functional tight-binding with
+gaussian process regression (2019).
+[18] R. Xia and S. Kais, Quantum machine learning for elec-
+tronic structure calculations, Nat. Commun. 9, 4195
+(2018).
+[19] P. O. Dral, Quantum chemistry in the age of machine
+ 6
+learning, J. Phys. Chem. Lett. 11, 2336 (2020).
+[20] J. Carrasquilla and R. G. Melko, Machine learning phases
+of matter, Nat. Phys. 13, 431 (2017).
+[21] See Supplemental Material at [URL will be inserted by
+publisher] for more details.
+[22] An alternative deﬁnition of β(E), shown in the SM [21],
+may extend the validity of the approximation to up to
+7%.
+[23] D. Gresch, G. Autes, O. V. Yazyev, M. Troyer, D. Van-
+derbilt, B. A. Bernevig, and A. A. Soluyanov, Z2pack:
+Numerical implementation of hybrid wannier centers
+for identifying topological materials, Phys. Rev. B 95,
+075146 (2017).
+[24] G. Pizzi, V. Vitale, R. Arita, S. Blügel, F. Freimuth,
+G. Géranton, M. Gibertini, D. Gresch, C. Johnson,
+T. Koretsune, J. Ibañez-Azpiroz, H. Lee, J.-M. Lihm,
+D. Marchand, A. Marrazzo, Y. Mokrousov, J. I. Mustafa,
+Y. Nohara, Y. Nomura, L. Paulatto, S. Poncé, T. Pon-
+weiser, J. Qiao, F. Thöle, S. S. Tsirkin, M. Wierzbowska,
+N. Marzari, D. Vanderbilt, I. Souza, A. A. Mostoﬁ, and
+J. R. Yates, Wannier90 as a community code: new fea-
+tures and applications, J. Phys.: Condens. Matter 32,
+165902 (2020).
+[25] M. B. Nardelli, F. T. Cerasoli, M. Costa, S. Curtarolo,
+R. De Gennaro, M. Fornari, L. Liyanage, A. R. Supka,
+and H. Wang, PAOFLOW: A utility to construct and
+operate on ab initio hamiltonians from the projections
+of electronic wavefunctions on atomic orbital bases, in-
+cluding characterization of topological materials, Com-
+put. Mater. Sci. 143, 462 (2018).
+[26] D. Vanderbilt, The pythtb package, in Berry Phases
+in Electronic Structure Theory:
+Electric Polarization,
+Orbital Magnetization and Topological Insulators (Cam-
+bridge University Press, 2018) pp. 327–362.
+[27] C. W. Groth, M. Wimmer,
+A. R. Akhmerov, and
+X. Waintal, Kwant:
+a software package for quantum
+transport, New J. Phys. 16, 063065 (2014).
+[28] L. Lima, A. Dusko, and C. Lewenkopf, Eﬃcient method
+for computing the electronic transport properties of a
+multiterminal system, Phys. Rev. B 97, 165405 (2018).
+[29] S. M. João, M. Anđelković, L. Covaci, T. G. Rappoport,
+J. M. Lopes, and A. Ferreira, Kite: high-performance
+accurate modelling of electronic structure and response
+functions of large molecules, disordered crystals and het-
+erostructures, R. Soc. Open Sci. 7, 191809 (2020).
+[30] J. French, P. Mello, and A. Pandey, Ergodic behavior in
+the statistical theory of nuclear reactions, Phys. Lett. B
+80, 17 (1978).
+[31] E. Brézin and A. Zee, Correlation functions in disordered
+systems, Phys. Rev. E 49, 2588 (1994).
+[32] T. Guhr, A. Müller-Groeling, and H. A. Weidenmüller,
+Random-matrix theories in quantum physics: common
+concepts, Phys. Rep. 299, 189 (1998).
+[33] P. A. Lee, A. D. Stone, and H. Fukuyama, Universal con-
+ductance ﬂuctuations in metals: Eﬀects of ﬁnite temper-
+ature, interactions, and magnetic ﬁeld, Phys. Rev. B 35,
+1039 (1987).
+[34] E. R. P. Alves and C. H. Lewenkopf, Conductance ﬂuc-
+tuations and weak localization in chaotic quantum dots,
+Phys. Rev. Lett. 88, 256805 (2002).
+[35] The applicability of the method for (strongly) interacting
+systems, i.e. beyond the mean ﬁeld approximation, is not
+clear yet.
+ Disorder information from conductance: a quantum inverse problem
+(Supplemental Material)
+S. Mukim, F. P. Amorim, A. R. Rocha, R. B. Muniz, C. Lewenkopf, and M. S. Ferreira
+I. INVERSION PROCEDURE: TECHNICAL
+ASPECTS
+Here we provide details of the inversion procedure im-
+plementation and an analysis of its accuracy. For that
+purpose we use the model system introduced in the main
+text as an illustrative example. Our strategy relies on
+calculating the conductance spectra that is used as in-
+put functions of the inversion method simply because
+we can refer back to the Hamiltonian that generated
+them in the ﬁrst place, allowing us to establish whether
+or not the inversion was successful.
+A simple test is
+to start from the Hamiltonian of an arbitrary speciﬁc
+conﬁguration of N impurities randomly located and cal-
+culate the corresponding conductance spectrum.
+This
+translates into an impurity concentration n (see main
+manuscript). The inversion works by ﬁnding the concen-
+tration that minimizes the misﬁt function, which we call
+nmin. We then deﬁne the inversion procedure accuracy
+as α = |n −nmin|/n. In what follows we analyse how α
+depends on a few essential parameters and show that a
+careful tuning of such parameters may improve the suc-
+cess rate of the inversion methodology.
+1. Accuracy of the inversion procedure
+Figure 1 shows the inversion accuracy α for graphene
+nanoribbons (GNR) with W = 3a and L = 100 unit
+cells as a function of impurity concentration. One can
+see that α is very small for all concentrations below 8%,
+clearly indicating that our inversion tool is very reliable
+for dilute impurity concentrations.
+It is worth recalling that we can not only conﬁrm
+what the real impurity concentration that generated the
+Hamiltonian is but also the exact locations of the ran-
+domly placed impurities.
+Interestingly, as the concen-
+tration increases we ﬁnd a growing number of impurities
+that are adjacent to one another forming pairs that may
+act as if they were isolated scatterers. For example, a ran-
+domly selected conﬁguration of 15 impurities may have
+13 of them well isolated whereas the remainder are clus-
+tered into a pair. In cases like that the inversion ﬁnds a
+concentration that would correspond to 14 impurities for
+the simple fact that the cluster may actually behave as
+a single scatterer. This explains why the inversion error
+also increases with the concentration. It is possible to
+reduce the error further by accounting for the probabil-
+ity of forming such pairs. By relaxing the assumption
+2
+4
+6
+8
+10
+0.00
+0.05
+0.10
+0.15
+0.20
+0.25
+0.30
+n (%)
+α
+FIG. 1.
+Inversion accuracy α plotted as a function of the
+impurity concentration n for a GNR with W = 3a and L =
+100 unit cells. The impurity on-site potential was arbitrarily
+chosen as ϵ = 0.5t.
+of short-range uncorrelated disorder originally made, we
+may adopt a similar strategy to the one used to produce
+Figure 3(b) of the main text, i.e., where we treat im-
+purity pairs as if they corresponded to a diﬀerent class
+of impurities. In this way it is straightforward to dis-
+cern between isolated and paired impurities, leading to
+an improved accuracy that can be sustained up to higher
+concentrations.
+2. Averaging energy window
+The misﬁt function χ depends on the integration limits
+E+ and E−, that is, the averaging energy window.
+Figure 2 plots the inversion error α as a function of
+(E+ −E−)/Z, where Z is the bandwidth.
+Note that
+α is large for very narrow energy windows, in perfect
+agreement with the single-energy featureless results of
+Fig. 2(a) presented in the main manuscript. Note that
+any window at least 20% of the bandwidth generates ex-
+cellent results.
+In practical situations, it can be a diﬃcult task to ob-
+tain the conductance spectrum over a signiﬁcant portion
+of the bandwidth.
+We argue that good accuracy, i.e.,
+small values of α, can be obtained with fairly small av-
+eraging windows. The idea of averaging is to eliminate
+the universal conductance ﬂuctuations from the misﬁt
+function χ. Hence, the averaging window has to be suf-
+ﬁciently broad to contain a large number of oscillations
+of Γ(E). More precisely, ∆E/δEcor ≫1, where δEcor
+arXiv:2007.12504v1  [cond-mat.mes-hall]  24 Jul 2020
+ 2
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+1.2
+ϵ+-ϵ-
+Z
+α
+FIG. 2. Inversion accuracy α as a function of averaging en-
+ergy window considered for inversion technique. Averaging is
+carried out with 100 diﬀerent conﬁgurations of L = 100 unit
+cells, each one of them containing 3% of impurities.
+is the transmission autocorrelation length. Fortunately,
+the conductance ﬂuctuations in mesoscopic systems are
+characterized by δEcor that are typically much smaller
+than the band width Z. Theory [1, 2] shows that δEcor
+depends essentially on the mean level density and on the
+average transmission ⟨Γ(E, n)⟩. We point out that the
+same idea can be extended to variations other than the
+energy, such as with external ﬁelds, strain, etc.
+3. Device size and transport regime
+It is important to assess how accurate the inversion
+procedure is in diﬀerent transport regimes. Fig. 3 plots
+the inversion accuracy as a function of the device size
+L for a concentration of n = 4%. It is unquestionable
+that the accuracy is very good (α < 0.1) for all sizes
+considered. It is instructive to put this result in context
+by looking at the localization length of the system, which
+in the case of n = 4% of impurities is approximately
+100 unit cells. That means that the inversion performs
+remarkably well regardless of the transport regime, i.e.,
+whether it is ballistic, diﬀusive or at the onset of the
+localized regime.
+4. Averaging procedure and statistical signiﬁcance of
+the Conﬁguration Average (CA) calculations
+As discussed in the main text, the underlying hypoth-
+esis for the applicability of the method are that conduc-
+tance ﬂuctuations contain very little system-speciﬁc in-
+formation (depending on disorder they can even have a
+universal character) and that the average conductance
+depends smoothly on the variables of interest. To obtain
+20
+40
+60
+80
+100
+120
+140
+0.00
+0.02
+0.04
+0.06
+0.08
+0.10
+L
+α
+FIG. 3. Inversion accuracy α as a function of device size L
+(in unit cells). Devices of all sizes contained a ﬁxed impurity
+concentration of n = 4%.
+accurate averages from a data set of the conductance as
+a function of a continuous (running) variable we use a
+standard ergodic hypothesis [3]. To be more precise, let
+us deﬁne the running average of a quantitity of interest
+O as
+⟨O(X)⟩≡
+1
+∆X
+Z
+dX O(X)
+where X is a generic continuous (running) variable and
+∆X is its corresponding range in the data set. In our
+study we employ the ergodic hypothesis to replace av-
+erages over conﬁgurational disorder (ensemble averages)
+with running averages, i.e.,
+Γ(X) = ⟨Γ(X)⟩
+and
+Γ(X)Γ(X + δX) = ⟨Γ(X)Γ(X + δX)⟩
+Note that the conductance is a two-point Green’s func-
+tion. This allows us to justify our statistical assumptions
+based on the vast literature on both the Kubo conduc-
+tity for disordered diﬀusive bulk systems and Landauer
+conductance for disordered/chaotic nanostructures.
+Regarding the number of conﬁgurations needed in the
+CA procedure, as standard, the higher the value of
+disorder realizations M the smaller the ﬂuctuations in
+⟨Γ(E, n)⟩.
+Universal conductance ﬂuctuations (UCF)
+help one to obtain accurate results for ⟨Γ(E, n)⟩at a
+modest value of M. Both for diﬀusive [4, 5] and chaotic
+ballistic systems [6], var(Γ) ≈1 is the main ﬁngerprint of
+UCF. Hence, the CA relative statistical error is expected
+to scale with [
+√
+M × ⟨Γ(E, n)⟩]−1.
+To bring the degree of ﬂuctuations to an acceptable
+level and produce results that are statistically signiﬁcant,
+we note that M is usually of the order 103. [7, 8]. One-
+dimensional (1D) systems, with corresponding smaller
+ 3
+10
+1000
+2000
+3000
+4000
+5000
+0.00
+0.05
+0.10
+0.15
+0.20
+M
+α
+FIG. 4. Inversion accuracy α as a function of M. Calculations
+are for a GNR of L = 100 unit cells, all of which containing
+3% of impurities.
+mean dimensionless conductance, require higher values
+of M to achieve statistical signiﬁcance. Likewise, larger
+2D systems and 3D ones, with larger mean transmission
+coeﬃcients than those considered in this study, may re-
+quire fewer conﬁgurations.
+Figure 4 conﬁrms the earlier statement that M = 103
+is suﬃcient to achieve statistical signiﬁcance and reduce
+ﬂuctuations to acceptable levels. In fact, the inversion
+error practically vanishes once M is of that order of mag-
+nitude.
+5. Recursive Method
+As shown in the main manuscript, the ﬁrst order ap-
+proximation of CA conductance induces a minimum in
+the misﬁt function located at n∗= −B/A. Both A and
+B result from integrations whose integrands involve the
+function β(E) deﬁned in the main text as the n-derivative
+of the CA conductance evaluated at n = 0. While this
+is an excellent approximation for n ≤3%, it can be ex-
+tended to higher concentrations (up to 7%) if we adopt
+the following recursive procedure. We must redeﬁne β(E)
+as the n-derivative of the CA conductance evaluated at
+an arbitrary concentration n and follow the steps below:
+1. Evaluate average β(E) between n = 0 and an initial
+choice of n.
+2. Calculate n∗using the expression given in the main
+manuscript with the average β(E) function evalu-
+ated in step 1.
+3. Make n = n∗and return to step 1 until n∗con-
+verges.
+II. DFT CALCULATIONS
+The DFT calculation was performed using a localized
+atomic orbital basis set (LCAO), implemented in the
+SIESTA package [9]. All calculations were carried out
+using a double-ζ basis with polarization orbitals within
+the generalized gradient approximation (GGA-PBE) [10]
+for the exchange and correlation potential. A real space
+mesh cut-oﬀof 300Ry, and a Monkhorst-Pack k-grid 80
+points along the ribbon direction were chosen. The struc-
+tures were fully relaxed down to a threshold force criteria
+of 0.01eV/Å.
+Calculations for the disordered system were imple-
+mented in the following way: two initial DFT calculations
+were done, namely for a pristine GNR, and for a nanorib-
+bon of length L = 7 unit cells containing only a single
+nitrogen substitutional impurity. From the Hamiltonians
+of the pristine ribbon and the one containing a single ni-
+trogen, we assemble the N-impurity device by randomly
+distributing these building blocks over a ﬁxed length and
+defect concentration. This is illustrated in Fig. 5 show-
+ing how the building blocks are patched together to form
+the device containing a ﬁnite concentration of impurities.
+Given the localized nature of the basis orbitals, the full
+Hamiltonian for the disordered problem is block tridiag-
+onal. We can thus use a recursive method [11–14] to ﬁnd
+the Green function matrix elements required to compute
+the Landauer conductance. These were the steps followed
+to obtain the conductance spectra Γ(E) of all DFT-based
+calculations.
+1. DFT-based tight-binding Hamiltonian
+There are numerous ways of extracting eﬀective tight-
+binding (TB) Hamiltonians from DFT calculations, all of
+which reproduce the corresponding band structures very
+accurately [15–17]. Combined with the help of quantum
+transport scripts [18], the TB parameters can be exported
+to highly eﬃcient codes [19–21] that can handle quantum
+transport calculations of very large systems. Despite the
+wide availability of such DFT-based TB Hamiltonians,
+for simplicity, the illustrative examples in the manuscript
+focus on single-band TB models. We stress, however, the
+following description is applicable to whichever TB-based
+model one chooses to adopt.
+Instead of the usual band-structure ﬁtting [22, 23], our
+adopted procedure consisted of comparing the conduc-
+tance spectra calculated within DFT and tight-binding.
+For the sake of diﬀerentiation we refer to them as ΓDFT
+N
+and ΓTB
+N , where the subscript simply indicates the num-
+ber of impurities contained in the device.
+From the
+impurity-free results, i.e. ΓDFT
+0
+and ΓTB
+0 , it is straight-
+forward to extract the hopping parameter t that best
+captures the electronic structure of the pristine ribbon
+in question.
+The impurity on-site parameter ϵ is eas-
+ 4
+...
+...
+...
+...
+...
+...
+...
+...
+...
+Scattering Region
+Pristine 
+Block
+Single Defect Block 
+Left Lead
+Right Lead
+FIG. 5.
+Illustrative diagram showing two diﬀerent building blocks patched together at a random order to generate the
+ﬁnite-concentration device. The Hamiltonian of both blocks were obtained from DFT calculations.
+ily found from ΓDFT
+1
+, which corresponds to the con-
+ductance in the presence of only a single impurity.
+It
+follows from a simple plot of the misﬁt function as a
+function of the impurity on-site potential, i.e. χ(ϵ) =
+R
+dE[ΓDFT
+1
+−ΓTB
+1 (ϵ)]2. In this case ΓTB
+1 (ϵ) is the tight-
+binding conductance of a ribbon with a single impurity
+with on-site potential ϵ.
+The function χ(ϵ) presents a
+very distinctive minimum, which we adopt as the value
+that best represents the scattering strength of the im-
+purity. It is worth mentioning that it is not necessary
+to know the exact location of the impurity in the DFT
+calculation. In fact, this is automatically accounted for
+by evaluating the misﬁt function χ(ϵ) for distinct impu-
+rity locations in the tight-binding part of the calculation.
+This is depicted in Fig.6. The absolute minimum found
+for χ(ϵ) corresponds to the impurity location used in the
+DFT-based conductance which also deﬁnes the value of
+the on-site potential to be adopted in the subsequent CA
+calculation.
+Finally, it is also instructive to compare the conduc-
+tance spectra ΓDFT
+1
+and ΓTB
+1 , the latter being calculated
+with the on-site potential ϵ obtained as described above.
+Bearing in mind that the misﬁt function was obtained
+by an integration in the 0 −0.2 eV energy range, the
+agreement between the two results shown in Fig.7 is yet
+another indication of the eﬀectiveness of our inversion
+procedure since both curves were calculated separately
+and independently.
+2. DFT-based misﬁt function
+Although the approach described above is undoubt-
+edly a good strategy to illustrate what can be achieved
+by carrying out the CA calculation within the TB model,
+it is by no means essential. To make this point evident,
+we have also carried out the CA part of the calculation
+entirely within DFT without availing of any TB parame-
+terization. For each concentration value, M=50 diﬀerent
+DFT disordered conﬁgurations were considered, each one
+of them generating conductance spectra with 500 energy
+values. The obtained misﬁt function χ(n) seen in Fig. 8
+displays the same distinctive trend seen previously and
+0
+1/6
+1/3
+1/2
+0.0
+0.5
+1.0
+1.5
+2.0
+ϵ
+y
+w
+FIG. 6. Contour plot of the misﬁt function χ to evaluate the
+impurity TB on-site energy ϵ.
+The single impurity sample
+conductance contains information about the location as well
+as the scattering strength of the impurity. The variable y/W
+indicates the impurity location, with y/W = 0 corresponding
+to the edge of the GNR and y/W = 1/2 marking its centre.
+- 8
+- 6
+- 4
+- 2
+0
+2
+0
+1
+2
+3
+Ε (eV)
+Γ
+FIG. 7. Conductance as a function of the energy (in eV). The
+(blue) solid line represents ΓDFT
+1
+and the (red) dashed line
+corresponds to ΓTB
+1 .
+ 5
+with a minimum at exactly the same value (n = 0.7%) as
+the one depicted in Fig.4b of the main manuscript. This
+clearly indicates that the inversion method can decode
+the disorder signatures contained in the conductance sig-
+nals regardless of the tool used to describe the underlying
+electronic structure. It is reassuring to ﬁnd exactly the
+same answer using totally diﬀerent tools.
+0.2
+0.4
+0.6
+0.8
+1.0
+0
+2
+4
+6
+n (%)
+χ
+FIG. 8. DFT based misﬁt function generated for an arbitrary
+conﬁguration correctly indicates the minimum at 0.7% shown
+as a black dashed line.
+[1] C. H. Lewenkopf and H. A. Weidenmüller, Stochastic ver-
+sus semiclassical approach to quantum chaotic scattering,
+Ann. Phys. 212, 53 (1991).
+[2] E. R. P. Alves and C. H. Lewenkopf, Conductance ﬂuc-
+tuations and weak localization in chaotic quantum dots,
+Phys. Rev. Lett. 88, 256805 (2002).
+[3] J. French, P. Mello, and A. Pandey, Ergodic behavior in
+the statistical theory of nuclear reactions, Phys. Lett. B
+80, 17 (1978).
+[4] P. A. Lee and A. D. Stone, Universal conductance ﬂuc-
+tuations in metals, Phys. Rev. Lett. 55, 1622 (1985).
+[5] P. A. Lee, A. D. Stone, and H. Fukuyama, Universal con-
+ductance ﬂuctuations in metals: Eﬀects of ﬁnite temper-
+ature, interactions, and magnetic ﬁeld, Phys. Rev. B 35,
+1039 (1987).
+[6] H. U. Baranger and P. A. Mello, Mesoscopic transport
+through chaotic cavities: A random S-matrix theory ap-
+proach, Phys. Rev. Lett. 73, 142 (1994).
+[7] Y. Alhassid, The statistical theory of quantum dots, Rev.
+Mod. Phys. 72, 895 (2000).
+[8] A. Lopez-Bezanilla and O. A. von Lilienfeld, Model-
+ing electronic quantum transport with machine learning,
+Phys. Rev. B 89, 235411 (2014).
+[9] J. M. Soler, E. Artacho, J. D. Gale, A. García, J. Jun-
+quera, P. Ordejón, and D. Sánchez-Portal, The siesta
+method for ab initio order-n materials simulation, J.
+Phys.: Condens. Matter 14, 2745 (2002).
+[10] J. P. Perdew, K. Burke, and M. Ernzerhof, Generalized
+gradient approximation made simple, Phys. Rev. Lett.
+77, 3865 (1996).
+[11] R. G. Amorim, A. Fazzio, A. J. R. da Silva, and A. R.
+Rocha, Conﬁnement eﬀects and why carbon nanotube
+bundles can work as gas sensors, Nanoscale 5, 2798
+(2013).
+[12] C. G. Rocha, A. Wall, A. R. Rocha, and M. S. Ferreira,
+Modelling the eﬀect of randomly dispersed adatoms on
+carbon nanotubes, J. Phys.: Condens. Matter 19, 346201
+(2007).
+[13] A. R. Rocha, M. Rossi, A. Fazzio, and A. J. R. da Silva,
+Designing real nanotube-based gas sensors, Phys. Rev.
+Lett. 100, 176803 (2008).
+[14] A. R. Rocha, M. Rossi, A. J. R. da Silva, and A. Fazzio,
+Realistic calculations of carbon-based disordered sys-
+tems, J. Phys. D: Appl. Phys. 43, 374002 (2010).
+[15] D. Gresch, G. Autes, O. V. Yazyev, M. Troyer, D. Van-
+derbilt, B. A. Bernevig, and A. A. Soluyanov, Z2pack:
+Numerical implementation of hybrid wannier centers
+for identifying topological materials, Phys. Rev. B 95,
+075146 (2017).
+[16] G. Pizzi, V. Vitale, R. Arita, S. Blügel, F. Freimuth,
+G. Géranton, M. Gibertini, D. Gresch, C. Johnson,
+T. Koretsune, J. Ibañez-Azpiroz, H. Lee, J.-M. Lihm,
+D. Marchand, A. Marrazzo, Y. Mokrousov, J. I. Mustafa,
+Y. Nohara, Y. Nomura, L. Paulatto, S. Poncé, T. Pon-
+weiser, J. Qiao, F. Thöle, S. S. Tsirkin, M. Wierzbowska,
+N. Marzari, D. Vanderbilt, I. Souza, A. A. Mostoﬁ, and
+J. R. Yates, Wannier90 as a community code: new fea-
+tures and applications, J. Phys.: Condens. Matter 32,
+165902 (2020).
+[17] M. B. Nardelli, F. T. Cerasoli, M. Costa, S. Curtarolo,
+R. De Gennaro, M. Fornari, L. Liyanage, A. R. Supka,
+and H. Wang, PAOFLOW: A utility to construct and
+operate on ab initio hamiltonians from the projections
+of electronic wavefunctions on atomic orbital bases, in-
+cluding characterization of topological materials, Com-
+put. Mater. Sci. 143, 462 (2018).
+[18] D. Vanderbilt, The pythtb package, in Berry Phases
+in Electronic Structure Theory:
+Electric Polarization,
+Orbital Magnetization and Topological Insulators (Cam-
+bridge University Press, 2018) pp. 327–362.
+[19] C. W. Groth, M. Wimmer,
+A. R. Akhmerov, and
+X. Waintal, Kwant:
+a software package for quantum
+transport, New J. Phys. 16, 063065 (2014).
+[20] L. Lima, A. Dusko, and C. Lewenkopf, Eﬃcient method
+for computing the electronic transport properties of a
+multiterminal system, Phys. Rev. B 97, 165405 (2018).
+[21] S. M. João, M. Anđelković, L. Covaci, T. G. Rappoport,
+J. M. Lopes, and A. Ferreira, Kite: high-performance
+accurate modelling of electronic structure and response
+functions of large molecules, disordered crystals and het-
+erostructures, R. Soc. Open Sci. 7, 191809 (2020).
+[22] D. A. Papaconstantopoulos et al., Handbook of the band
+structure of elemental solids (Springer, 1986).
+[23] J. C. Slater and G. F. Koster, Simpliﬁed LCAO method
+for the periodic potential problem, Phys. Rev. 94, 1498
+(1954).
+ 
